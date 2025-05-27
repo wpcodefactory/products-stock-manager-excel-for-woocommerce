@@ -84,7 +84,7 @@ final class WPFactory_WC_SM {
 	 */
 	function localize() {
 		load_plugin_textdomain(
-			'stockManagerWooCommerce',
+			'products-stock-manager-excel',
 			false,
 			dirname( plugin_basename( WPFACTORY_WC_SM_FILE ) ) . '/langs/'
 		);
@@ -146,7 +146,7 @@ final class WPFactory_WC_SM {
 		$custom_links = array();
 
 		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=stock-manager-woocommerce' ) . '">' .
-			__( 'Settings', 'stockManagerWooCommerce' ) .
+			__( 'Settings', 'products-stock-manager-excel' ) .
 		'</a>';
 
 		return array_merge( $custom_links, $links );
@@ -186,8 +186,8 @@ final class WPFactory_WC_SM {
 
 		add_submenu_page(
 			$admin_menu->get_menu_slug(),
-			__( 'Stock Manager', 'stockManagerWooCommerce' ),
-			__( 'Stock Manager', 'stockManagerWooCommerce' ),
+			__( 'Stock Manager', 'products-stock-manager-excel' ),
+			__( 'Stock Manager', 'products-stock-manager-excel' ),
 			'manage_woocommerce',
 			'stock-manager-woocommerce',
 			array( $this, 'output_settings' )
