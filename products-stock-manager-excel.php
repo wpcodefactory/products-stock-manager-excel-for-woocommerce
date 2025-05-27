@@ -73,13 +73,13 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		add_action( 'wpfactory_wc_sm_output_settings', array( $this, 'init' ) );
 
 		add_action( 'wp_ajax_nopriv_update_products', array( $this, 'update_products' ) );
-		add_action( 'wp_ajax_update_products', array( $this, 'update_products' ) );
+		add_action( 'wp_ajax_update_products',        array( $this, 'update_products' ) );
 
-		add_action( 'wp_ajax_smw_exportProducts', array( $this, 'smw_exportProducts' ) );
+		add_action( 'wp_ajax_smw_exportProducts',        array( $this, 'smw_exportProducts' ) );
 		add_action( 'wp_ajax_nopriv_smw_exportProducts', array( $this, 'smw_exportProducts' ) );
 
 		add_action( 'wp_ajax_nopriv_extensions', array( $this, 'extensions' ) );
-		add_action( 'wp_ajax_extensions', array( $this, 'extensions' ) );
+		add_action( 'wp_ajax_extensions',        array( $this, 'extensions' ) );
 
 		add_action( 'admin_footer', array( $this, 'proModal' ) );
 
@@ -90,12 +90,10 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		add_filter(
 			'codecabin_deactivate_feedback_form_plugins',
 			function ( $plugins ) {
-
 				$plugins[] = (object) array(
 					'slug'    => 'products-stock-manager-excel',
 					'version' => '2.1',
 				);
-
 				return $plugins;
 			}
 		);
@@ -104,9 +102,12 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 		add_action( 'admin_notices', array( $this, 'notification' ) );
 		add_action( 'wp_ajax_nopriv_push_not', array( $this, 'push_not' ) );
-		add_action( 'wp_ajax_push_not', array( $this, 'push_not' ) );
+		add_action( 'wp_ajax_push_not',        array( $this, 'push_not' ) );
 	}
 
+	/**
+	 * onActivation.
+	 */
 	public function onActivation() {
 		require_once ABSPATH . '/wp-admin/includes/plugin.php';
 		$pro = '/stock-manager-woocommerce-pro/stock-manager-woocommerce-pro.php';
@@ -120,10 +121,10 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 	 */
 	public function BackEndScripts( $hook ) {
 
-		// $screen = get_current_screen();
-		// var_dump( $screen );
-		// if ( 'woocommerce_page_stock-manager-woocommerce'  !== $screen->base )
-			// return;
+		$screen = get_current_screen();
+		if ( 'wpfactory_page_stock-manager-woocommerce' !== $screen->base ) {
+			return;
+		}
 
 		wp_enqueue_style( esc_html( $this->plugin ) . 'adminCss', plugins_url( '/css/backend.css?v=adj', __FILE__ ) );
 		wp_enqueue_style( esc_html( $this->plugin ) . 'adminCss' );
@@ -160,6 +161,9 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 	}
 
+	/**
+	 * init.
+	 */
 	public function init() {
 		print "<div class='" . esc_html( $this->plugin ) . "'>";
 			$this->adminHeader();
@@ -168,6 +172,9 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		print '</div>';
 	}
 
+	/**
+	 * proModal.
+	 */
 	public function proModal() {
 		?>
 			<div style='display:none' id="<?php print esc_html( $this->plugin ) . 'Modal'; ?>">
@@ -197,11 +204,18 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 			<?php
 	}
 
-	// Email notification form
+	/**
+	 * notification_hook.
+	 *
+	 * Email notification form.
+	 */
 	public function notification_hook() {
 		set_transient( 'stock_manager_notification', true );
 	}
 
+	/**
+	 * notification.
+	 */
 	public function notification() {
 		/* Check transient, if available display notice */
 		if ( get_transient( 'stock_manager_notification' ) ) {
@@ -220,6 +234,9 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		}
 	}
 
+	/**
+	 * push_not.
+	 */
 	public function push_not() {
 		delete_transient( 'stock_manager_notification' );
 	}
