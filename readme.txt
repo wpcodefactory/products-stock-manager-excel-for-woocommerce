@@ -1,15 +1,14 @@
 === Products Stock Manager with Excel for WooCommerce Inventory ===
-Contributors: taz_bambu
-Donate link: https://extend-wp.com/stock-manager-excel-woocommerce
+Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
 Tags:  update stock, stock export, stock manager, stock management, inventory, excel, stock , woocommerce
 Requires at least: 3.0.1
 Requires PHP: 8.1
-Tested up to: 6.7.1
-Stable tag: trunk
+Tested up to: 6.8
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Update your WooCommerce Products Stock inventory and Prices with the power of Excel  
+Update your WooCommerce Products Stock inventory and Prices with the power of Excel
 == Description ==
 
 = Products Stock Manager with Excel for WooCommerce plugin gives the ability to update your stock inventory and prices with the power of excel  =
@@ -50,7 +49,7 @@ In the (**[PRO Version](https://extend-wp.com/product/products-stock-manager-exc
 * Export to Excel both Simple & Variable Products extra product fields if needed such as title, description, dimensions, taxonomies etc
 * Automatically Update using a Cron Job  / Sync stock using an Excel placed in a Remote Location. Google Spreadsheets "published on the web" xlsx is also supported to save you time and keep you in track.
 * Define Update frequency, Exact Time for execution of auto update
-* Added setting to calculate the sumn of stock number of a product in case of duplicate entries in excel 
+* Added setting to calculate the sumn of stock number of a product in case of duplicate entries in excel
 * Added setting to set 0 (zero) stock for all products before update
 
 [youtube https://www.youtube.com/watch?v=x7k0K-INp4Y&rel=0]
@@ -69,16 +68,16 @@ In the (**[PRO Version](https://extend-wp.com/product/products-stock-manager-exc
 
 
 = How to how to build my excel template? =
-Download a sample excel file from Update Screen of plugin settings. The fields updated are predefined and follow the exact excel template 
+Download a sample excel file from Update Screen of plugin settings. The fields updated are predefined and follow the exact excel template
 
 = How to update stock and prices via excel? =
-You can either go to Export screen first and get an excel of your products. Other option is to download a sample excel file from Update Screen of plugin settings. The fields updated are predefined and follow the exact excel template 
+You can either go to Export screen first and get an excel of your products. Other option is to download a sample excel file from Update Screen of plugin settings. The fields updated are predefined and follow the exact excel template
 
 = Can I automatically update at certain time ? =
-This is available in the [PRO Version](https://extend-wp.com/product/products-stock-manager-excel-woocommerce "Products Stock Manager with Excel for WooCommerce PRO") 
+This is available in the [PRO Version](https://extend-wp.com/product/products-stock-manager-excel-woocommerce "Products Stock Manager with Excel for WooCommerce PRO")
 
 = Can I update Product variations? =
-This is available in the [PRO Version](https://extend-wp.com/product/products-stock-manager-excel-woocommerce "Products Stock Manager with Excel for WooCommerce PRO") 
+This is available in the [PRO Version](https://extend-wp.com/product/products-stock-manager-excel-woocommerce "Products Stock Manager with Excel for WooCommerce PRO")
 
 == Screenshots ==
 
@@ -89,6 +88,11 @@ This is available in the [PRO Version](https://extend-wp.com/product/products-st
 
 
 == Changelog ==
+
+= 3.0.0 - 27/05/2025 =
+* Dev - Code refactoring and cleanup.
+* WC tested up to: 9.8.
+* Tested up to: 6.8.
 
 = 2.1 =
 PHPSPREADSHEET updated to 3.4.0 , regularquireds PHP 8.1 , checked woo 9.5 and 6.7.1 WP compatibility

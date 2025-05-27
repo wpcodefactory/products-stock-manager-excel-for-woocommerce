@@ -1,28 +1,39 @@
 <?php
 /*
  * Plugin Name: Products Stock Manager with Excel for WooCommerce Inventory
- * Description: Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate
- * Version: 2.1
- * Author: extendWP
- * Author URI: https://extend-wp.com
- *
+ * Description: Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate.
+ * Version: 3.0.0-dev
+ * Author: WPFactory
+ * Author URI: https://wpfactory.com
  * WC requires at least: 2.2
- * WC tested up to: 9.5
- *
+ * WC tested up to: 9.8
+ * Requires Plugins: woocommerce
  * Requires PHP: 8.1
  * License: GPL2
  * Created On: 07-07-2020
- * Updated On: 24-11-2024
+ * Updated On: 27-05-2025
  * Text Domain: products-stock-manager-excel
+ * Domain Path: /langs
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
+defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0-dev-20250527-1053' );
+
+defined( 'WPFACTORY_WC_SM_FILE' ) || define( 'WPFACTORY_WC_SM_FILE', __FILE__ );
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpfactory-wc-sm.php';
+
+/**
+ * class-main.php.
+ */
 require_once plugin_dir_path( __FILE__ ) . '/class-main.php';
 
-
+/**
+ * StockManagerWooCommerce class.
+ *
+ * @version 3.0.0
+ */
 class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 		public $plugin       = 'stockManagerWooCommerce';
@@ -107,8 +118,13 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 				// if want to print some inline script
 	}
 
+	/**
+	 * translate.
+	 *
+	 * @version 3.0.0
+	 */
 	public function translate() {
-		load_plugin_textdomain( $this->plugin, false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+		load_plugin_textdomain( $this->plugin, false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
 	}
 
 	public function BackEndScripts( $hook ) {
@@ -187,7 +203,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 							<img style='width:90%' src='<?php echo esc_url( plugins_url( 'images/' . esc_html( $this->slug ) . '-pro.png', __FILE__ ) ); ?>' style='width:100%' />
 						</center>
 					</div>
-					
+
 					<div class='<?php print esc_html( $this->plugin ); ?>columns2'>
 						<h3><?php esc_html_e( 'Go PRO and get more important features!', 'products-stock-manager-excel' ); ?></h3>
 						<p><i class='fa fa-check'></i> <?php esc_html_e( 'Update stock & prices with excel for product variations with Excel', 'products-stock-manager-excel' ); ?></p>
@@ -200,7 +216,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 					</div>
 				</div>
 				</div>
-			</div>		
+			</div>
 			<?php
 	}
 

@@ -241,7 +241,7 @@ class StockManagerWooCommerceInit {
 			?>
 				<div class='result'><?php $this->adminProcessSettings(); ?> </div>
 				<form method="post" id='<?php print esc_html( $this->plugin ); ?>Form'  >
-				
+
 				<?php
 
 				settings_fields( esc_html( $this->plugin ) . 'general-options' );
@@ -252,7 +252,7 @@ class StockManagerWooCommerceInit {
 
 				?>
 				</form>
-				
+
 				<?php
 
 		} elseif ( ! isset( $_GET['tab'] ) || $this->activeTab == 'import' ) {
@@ -273,7 +273,7 @@ class StockManagerWooCommerceInit {
 		<button class='button-primary extendwp_extensions'><i class='fa fa-puzzle-piece'></i> <?php print esc_html__( 'More Extensions', 'products-stock-manager-excel' ); ?></button>
 		<a target='_blank' class='web_logo' href='https://extend-wp.com/wordpress-premium-plugins/'>
 			<img  src='<?php echo esc_url( plugins_url( 'images/extendwp.png', __FILE__ ) ); ?>' alt='<?php print esc_html( 'Get more plugins by extendWP', 'products-stock-manager-excel' ); ?>' title='<?php print esc_html( 'Get more plugins by extendWP', 'products-stock-manager-excel' ); ?>' />
-			
+
 		</a><div class='get_ajax'></div>
 		<?php
 	}
@@ -287,17 +287,17 @@ class StockManagerWooCommerceInit {
 					<i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i><i class='fa fa-star' ></i>
 				</a>
 
-		</div> 	
+		</div>
 		<?php
 	}
 
 	public function lowStockValue() {
-		
-		if( !empty( $_POST[ $this->plugin . 'lowStockValue' ] ) ) { 
+
+		if( !empty( $_POST[ $this->plugin . 'lowStockValue' ] ) ) {
 			$lowStockValue = $_POST[ $this->plugin . 'lowStockValue' ];
 		} elseif( !empty( get_option( $this->plugin . 'lowStockValue' ) ) ) {
 			$lowStockValue = get_option( $this->plugin . 'lowStockValue' ) ;
-		}	
+		}
 		?>
 			<input type="number" name="<?php print esc_attr( $this->plugin ) . 'lowStockValue'; ?>" id="<?php print esc_attr( $this->plugin ) . 'lowStockValue'; ?>"  value="<?php print esc_attr( $lowStockValue ) ; ?>" placeholder='<?php esc_html_e( 'Low Stock Value', 'products-stock-manager-excel' ); ?>' />
 
@@ -325,7 +325,7 @@ class StockManagerWooCommerceInit {
 			<select disabled class='proVersion' name="<?php print esc_attr( $this->plugin ); ?>autoimport" required  placeholder='full on mobile' >
 				<option  value='yes' ><?php esc_html_e( 'Yes', 'products-stock-manager-excel' ); ?></option>
 				<option  value='no' ><?php esc_html_e( 'No', 'products-stock-manager-excel' ); ?></option>
-			</select>		
+			</select>
 		<?php
 	}
 
@@ -337,7 +337,7 @@ class StockManagerWooCommerceInit {
 			$addStockNumber = get_option( $this->plugin . 'addStockNumber' );
 		}
 		?>
-		<input type='checkbox' name='<?php print esc_attr( $this->plugin ) . 'addStockNumber'; ?>' id='<?php print esc_attr(  $this->plugin ) . 'addStockNumber'; ?>' value='yes' 
+		<input type='checkbox' name='<?php print esc_attr( $this->plugin ) . 'addStockNumber'; ?>' id='<?php print esc_attr(  $this->plugin ) . 'addStockNumber'; ?>' value='yes'
 												<?php
 												if ( $addStockNumber === 'yes' ) {
 													print 'checked';}
@@ -358,7 +358,7 @@ class StockManagerWooCommerceInit {
 						<option value='daily'><?php esc_html_e( 'Daily', 'products-stock-manager-excel' ); ?></option>
 						<option value='weekly'><?php esc_html_e( 'Weekly', 'products-stock-manager-excel' ); ?></option>
 						<option value='monthly'><?php esc_html_e( 'Monthly', 'products-stock-manager-excel' ); ?></option>
-				</select>			
+				</select>
 		<?php
 	}
 
@@ -411,18 +411,18 @@ class StockManagerWooCommerceInit {
 		<h3>
 		<?php esc_html_e( 'UPDATE SIMPLE PRODUCTS stock,prices ', 'products-stock-manager-excel' ); ?>
 		<span class='proVersion'><i><?php esc_html_e( '- variable products in pro', 'products-stock-manager-excel' ); ?></i></span>
-		</h3>	
-			
+		</h3>
+
 		<p>
-			<?php esc_html_e( 'Download the sample excel file, insert stock numbers and update using the form below', 'products-stock-manager-excel' ); ?> 
+			<?php esc_html_e( 'Download the sample excel file, insert stock numbers and update using the form below', 'products-stock-manager-excel' ); ?>
 			<a href='<?php echo esc_url( plugins_url( '/example_excel/example.xlsx', __FILE__ ) ); ?>'>
 				<?php esc_html_e( 'sample', 'products-stock-manager-excel' ); ?>
 			</a>
-		
+
 		</p>
 
 
-		<div>			
+		<div>
 			<form method="post" id='product_update' enctype="multipart/form-data" action= "<?php echo esc_url( admin_url( 'admin.php?page=stock-manager-woocommerce&tab=import' ) ); ?>">
 
 				<table class="form-table">
@@ -434,16 +434,16 @@ class StockManagerWooCommerceInit {
 									<img src="" class='userSelected'/>
 									<input type="file"  required name="file" class="smwFile"  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
 									<input type='hidden' name='start' value='2' />
-									<input type='hidden' name='action' value='update_products' />                                    
-								</div>						
+									<input type='hidden' name='action' value='update_products' />
+								</div>
 							</td>
 						</tr>
 				</table>
 				<?php submit_button( __( 'Upload', 'products-stock-manager-excel' ), 'primary', 'upload' ); ?>
-			</form>	
+			</form>
 			<div class='result'>
 				<?php $this->update_products(); ?>
-			</div>					
+			</div>
 		</div>
 		<?php
 	}
@@ -629,7 +629,7 @@ class StockManagerWooCommerceInit {
 		<p>
 			<i><?php esc_html_e( 'Important Note: always save the generated export file in xlsx format to a new excel for import use.', 'products-stock-manager-excel' ); ?></i>
 		</p>
-		<div>    
+		<div>
 			<div class='result'><?php $this->exportProductsForm() ;?></div>
 		</div>
 		<?php
@@ -645,13 +645,13 @@ class StockManagerWooCommerceInit {
 		);
 		if ( $query->have_posts() ) {
 			?>
-				<p class='exportToggler button button-secondary warning   btn btn-danger'><i class='fa fa-eye '></i> 
+				<p class='exportToggler button button-secondary warning   btn btn-danger'><i class='fa fa-eye '></i>
 					<?php esc_html_e( 'Filter & Fields to Show', 'products-stock-manager-excel' ); ?>
 				</p>
-				
-				
-				<form name='exportProductsForm' id='exportProductsForm' method='post' action= "<?php echo admin_url( 'admin.php?page=stock-manager-woocommerce&tab=export' ); ?>" >	
-					<table class='wp-list-table widefat fixed table table-bordered'>	
+
+
+				<form name='exportProductsForm' id='exportProductsForm' method='post' action= "<?php echo admin_url( 'admin.php?page=stock-manager-woocommerce&tab=export' ); ?>" >
+					<table class='wp-list-table widefat fixed table table-bordered'>
 
 						<tr>
 							<td>
@@ -697,7 +697,7 @@ class StockManagerWooCommerceInit {
 							<td>
 								<input type='number' name='sale_price' id='sale_price' placeholder='<?php esc_html_e( 'Sale Price', 'products-stock-manager-excel' ); ?>'/>
 							</td>
-							
+
 							<td>
 								<?php esc_html_e( 'Sale Price Selector', 'products-stock-manager-excel' ); ?>
 							</td>
@@ -708,8 +708,8 @@ class StockManagerWooCommerceInit {
 									<option value="<="><=</option>
 									<option value="<"><</option>
 									<option value="==">==</option>
-									<option value="!=">!=</option>						
-								</select>	
+									<option value="!=">!=</option>
+								</select>
 							</td>
 						</tr>
 
@@ -722,12 +722,12 @@ class StockManagerWooCommerceInit {
 							</td>
 							<input type='hidden' name='offset' style='width:100%;' id='offset' placeholder='<?php esc_html_e( 'Start from..', 'products-stock-manager-excel' ); ?>' />
 							<input type='hidden' name='start' /><input type='hidden' name='total' />
-							
+
 							<td></td><td></td>
 						</tr>
-						
+
 					</table>
-					
+
 					<?php $taxonomy_objects = get_object_taxonomies( 'product', 'objects' ); ?>
 
 
@@ -737,13 +737,13 @@ class StockManagerWooCommerceInit {
 								<?php esc_html_e( 'FIELDS TO SHOW apart from stock, prices, id, sku and title  - PRO VERSION', 'products-stock-manager-excel' ); ?>
 							</h2>
 						</legend>
-					
+
 						<?php
 						$cols = array( 'description', 'excerpt', 'post_name', '_variation_description', '_weight', '_width', '_length', '_height', '_downloadable', '_download_limit', '_download_expiry', '_virtual', '_purchase_note', '_upsell_ids', '_crosssell_ids', '_thumbnail_id', '_product_image_gallery', '_sold_individually', '_backorders', '_featured' );
 						?>
-						
+
 						<tr  class='proVersion'>
-						
+
 						<?php
 						$checked = 'checked';
 						foreach ( $cols as $col ) {
@@ -761,10 +761,10 @@ class StockManagerWooCommerceInit {
 							</td>';
 						}
 						?>
-						
+
 						</tr>
-					</table>			
-							
+					</table>
+
 					<input type='hidden' name='columnsToShow' value='1'  />
 					<input type='hidden' id='action' name='action' value='smw_exportProducts' />
 					<?php wp_nonce_field( 'columnsToShow' ); ?>
@@ -772,7 +772,7 @@ class StockManagerWooCommerceInit {
 					<?php submit_button( esc_html( 'Search', 'products-stock-manager-excel' ), 'primary', 'Search' ); ?>
 
 				</form>
-			
+
 			<div class='resultExport'>
 				<?php $this->exportProducts(); ?>
 			</div>
@@ -899,7 +899,7 @@ class StockManagerWooCommerceInit {
 				?>
 				<p class='message error'>
 					<?php esc_html_e( 'Wait... Download is loading...', 'products-stock-manager-excel' ); ?>
-					<b class='totalPosts'  ><?php print esc_html( $query->post_count ); ?></b>					
+					<b class='totalPosts'  ><?php print esc_html( $query->post_count ); ?></b>
 				</p>
 
 				<?php
@@ -917,7 +917,7 @@ class StockManagerWooCommerceInit {
 			<div class='exportTableWrapper'>
 				<table id='toskuExport'>
 					<thead>
-						<tr> 
+						<tr>
 							<th>
 								<?php esc_html_e( 'ID', 'products-stock-manager-excel' ); ?>
 							</th>
@@ -938,14 +938,14 @@ class StockManagerWooCommerceInit {
 							</th>
 							<th>
 								<?php esc_html_e( 'PRODUCT TITLE', 'products-stock-manager-excel' ); ?>
-							</th>								
+							</th>
 						</tr>
 					</thead>
 					<tbody class='tableExportAjax'>
-					</tbody>	
+					</tbody>
 				</table>
-			</div>	
-			
+			</div>
+
 			<?php
 
 		}//check request
@@ -1074,7 +1074,7 @@ class StockManagerWooCommerceInit {
 							<td><?php print esc_html( get_post_meta( get_the_ID(), '_stock', true ) ); ?></td>
 							<td><?php print esc_html( get_post_meta( get_the_ID(), '_stock_status', true ) ); ?></td>
 							<td><?php print esc_html( get_the_title() ); ?></td>
-										
+
 						<?php
 						print '</tr>';
 					}
@@ -1112,7 +1112,7 @@ class StockManagerWooCommerceInit {
 			<div id='noselling'>
 			<h3 class='text-center title'><i class='fa fa-pie-chart' ></i> <?php esc_html_e( 'General Stock Monitoring', 'products-stock-manager-excel' ); ?></h3>
 			<p><i><?php print esc_html__( 'Low stock is considered the number: ' , 'products-stock-manager-excel' ) . esc_html( $lowStockValue ) ; ?></i></p>
-			
+
 			<table class='widefat'>
 			<thead>
 				<tr>
@@ -1152,7 +1152,7 @@ class StockManagerWooCommerceInit {
 					</td>
 					<td><?php print wc_price( $this->get_product_total_sales( get_the_ID() ) ); ?>
 					</td>
-					
+
 					</tr>
 							<?php
 							// }
@@ -1175,17 +1175,17 @@ class StockManagerWooCommerceInit {
 					</td>
 					<td><?php print '-'; ?>
 					</td>
-					</tr>	
+					</tr>
 								<?php
 
 						}
 					}
 					?>
-	
+
 		<?php endwhile; ?>
-				<?php wp_reset_query(); ?>	
-	
-		</tbody> 
+				<?php wp_reset_query(); ?>
+
+		</tbody>
 		<input type="text" class="search" placeholder="<?php esc_html_e( 'Search...', 'products-stock-manager-excel' ); ?>"></input>
 		</table>
 
@@ -1204,14 +1204,14 @@ class StockManagerWooCommerceInit {
 		global $product;
 
 		$total_sales = $wpdb->get_var(
-			"SELECT SUM( order_item_meta__line_total.meta_value) as order_item_amount 
+			"SELECT SUM( order_item_meta__line_total.meta_value) as order_item_amount
 			FROM {$wpdb->posts} AS posts
 			INNER JOIN {$wpdb->prefix}woocommerce_order_items AS order_items ON posts.ID = order_items.order_id
 			INNER JOIN {$wpdb->prefix}woocommerce_order_itemmeta AS order_item_meta__line_total ON (order_items.order_item_id = order_item_meta__line_total.order_item_id)
 				AND (order_item_meta__line_total.meta_key = '_line_total')
-			INNER JOIN {$wpdb->prefix}woocommerce_order_itemmeta AS order_item_meta__product_id_array ON order_items.order_item_id = order_item_meta__product_id_array.order_item_id 
+			INNER JOIN {$wpdb->prefix}woocommerce_order_itemmeta AS order_item_meta__product_id_array ON order_items.order_item_id = order_item_meta__product_id_array.order_item_id
 			WHERE posts.post_type IN ( 'shop_order' )
-			AND posts.post_status IN ( 'wc-completed' ) AND ( ( order_item_meta__product_id_array.meta_key IN ('_product_id','_variation_id') 
+			AND posts.post_status IN ( 'wc-completed' ) AND ( ( order_item_meta__product_id_array.meta_key IN ('_product_id','_variation_id')
 			AND order_item_meta__product_id_array.meta_value IN ('{$productid}') ) );"
 		);
 

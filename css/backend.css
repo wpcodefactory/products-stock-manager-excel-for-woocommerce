@@ -16,7 +16,7 @@
 }
 .web_logo img{
 	width:150px;
-	height:auto;	
+	height:auto;
 }
 .stockManagerWooCommerce .rating i.fa-star{
 	color:gold;
@@ -75,18 +75,18 @@
 
 .stockManagerWooCommerce .uploader {
 	position:relative;
-	width:99%; 
+	width:99%;
 	height:300px;
-	background:#f3f3f3; 
+	background:#f3f3f3;
 	border:1px dashed #e8e8e8;
 	background-size:cover;
 	margin:0 auto;
 	text-align:center;
 	background:url('../images/default.png') no-repeat left center;
 }
-.smwFile{		
+.smwFile{
 	width:100%;
-	position:absolute;	
+	position:absolute;
 	height:300px;
 	top:0;
 	left:0;
@@ -231,7 +231,7 @@
 input.proVersion{
 	border:2px solid #fff;
 	background:#fefefe !important;
-	
+
 }
 h2 a.proVersion{
 	background:#42b72a !important;
@@ -278,7 +278,7 @@ span.proVersion{
 /* Modal Content/Box */
 #stockManagerWooCommerceModal .modal-content, .extendwp_extensions_content {
     background-color: #fefefe;
-    margin: 10% auto; 
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 70%; /* Could be more or less, depending on screen size */
@@ -311,7 +311,7 @@ span.proVersion{
 
 .stockManagerWooCommerceForm .premium_img{
 	max-width:50%;
-	max-height:50%;	
+	max-height:50%;
 }
 
 .stockManagerWooCommerceForm .premium_msg{
@@ -358,7 +358,7 @@ span.proVersion{
 /* =============== Responsive ================== */
 
 @media(max-width:992px){
-	
+
 	.extend_flex{
 		display:block
 	}
@@ -366,18 +366,18 @@ span.proVersion{
 		width:100% !important;
 		padding:10px !important;
 		box-sizing:border-box !important;
-	}	
-	
-	
+	}
+
+
 	.stockManagerWooCommercecolumns2{
 		float:none !important;
 		width:99% !important;
-	}	
+	}
 	.stockManagerWooCommerce  .columns2,.stockManagerWooCommerce  .columns3,.stockManagerWooCommerce  .columns4,.stockManagerWooCommerce  .columns5,.stockManagerWooCommerce  .columns6{
 		float:none;
 		width:99%;
-	}	
-	
+	}
+
 	.stockManagerWooCommerce  .left_wrap, .stockManagerWooCommerce .right_wrap{
 		float:none;
 		width:100%;
@@ -386,6 +386,6 @@ span.proVersion{
 
 	.stockManagerWooCommerce .border{
 		border-right:none;
-	}		
-		
+	}
+
 }
