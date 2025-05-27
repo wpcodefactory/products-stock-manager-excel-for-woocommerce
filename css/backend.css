@@ -28,22 +28,22 @@
 
 /* === Ajaxify === */
 .stockManagerWooCommerce.loading > * {
-    opacity:0.2;
+	opacity:0.2;
 }
 
 .stockManagerWooCommerce.loading:before {
-    position:fixed;
-    content: "Loading...";
-    font-size:2em;
-    padding: 22px;
-    background: #000;
-    background: url(../images/loading.gif) no-repeat center center;
-    color: #777;
-    width: 50%;
-    height:50%;
-    margin-left:15%;
-    box-sizing: border-box;
-    text-align:center;
+	position:fixed;
+	content: "Loading...";
+	font-size:2em;
+	padding: 22px;
+	background: #000;
+	background: url(../images/loading.gif) no-repeat center center;
+	color: #777;
+	width: 50%;
+	height:50%;
+	margin-left:15%;
+	box-sizing: border-box;
+	text-align:center;
 }
 
 /* === Container Elements === */
@@ -172,7 +172,7 @@
 }
 
 .stockManagerWooCommerce  .tableexport-caption {
-    caption-side: top !important;
+	caption-side: top !important;
 	text-align:left;
 }
 
@@ -267,25 +267,25 @@ span.proVersion{
 
 /*  PRO VERSION MODAL */
 #stockManagerWooCommerceModal, #extendwp_extensions_popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 99999999999999999999999999; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 99999999999999999999999999; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 #stockManagerWooCommerceModal .modal-content, .extendwp_extensions_content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 70%; /* Could be more or less, depending on screen size */
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 70%; /* Could be more or less, depending on screen size */
 	overflow:hidden;
 }
 
@@ -300,17 +300,17 @@ span.proVersion{
 
 /* The Close Button */
 #stockManagerWooCommerceModal .close , .extendwp_close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 #stockManagerWooCommerceModal .close:hover,
 #stockManagerWooCommerceModal .close:focus  , .extendwp_close:hover, .extendwp_close:focus{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .stockManagerWooCommerceForm .premium_img{

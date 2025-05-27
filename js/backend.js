@@ -32,9 +32,9 @@
 			}
 		}
 
-    $(function() {
-        $('.stockManagerWooCommerce .color').wpColorPicker();
-    });
+	$(function() {
+		$('.stockManagerWooCommerce .color').wpColorPicker();
+	});
 
 
 		//EXTENSIONS
@@ -117,16 +117,16 @@
 
 
 	$('.stockManagerWooCommerce #upload').attr('disabled','disabled');
-    $(".stockManagerWooCommerce .smwFile").on('change',function () {
-        var smprofileExtension = ['xls', 'xlsx'];
-        if ($.inArray($(this).val().split('.').pop().toLowerCase(), smprofileExtension) === -1) {
-            alert("Only format allowed: "+smprofileExtension.join(', '));
+	$(".stockManagerWooCommerce .smwFile").on('change',function () {
+		var smprofileExtension = ['xls', 'xlsx'];
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), smprofileExtension) === -1) {
+			alert("Only format allowed: "+smprofileExtension.join(', '));
 			$(".stockManagerWooCommerce input[type='submit']").attr('disabled','disabled');
-        }else{
+		}else{
 			$(".stockManagerWooCommerce input[type='submit']").removeAttr('disabled');
 			$(".stockManagerWooCommerce").find('form').submit();
 		}
-    });
+	});
 
 	$(".stockManagerWooCommerce #product_update").on("submit", function (e) {
 				e.preventDefault();
