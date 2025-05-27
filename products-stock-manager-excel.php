@@ -49,6 +49,7 @@ require_once plugin_dir_path( __FILE__ ) . '/class-main.php';
  *
  * @version 3.0.0
  *
+ * @todo    (v3.0.0) clean up
  * @todo    (v3.0.0) Plugin Check (PCP)
  * @todo    (v3.0.0) remove `$name`, `$slug`, `$proUrl`?
  */

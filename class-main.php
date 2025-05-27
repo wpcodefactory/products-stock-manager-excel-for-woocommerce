@@ -1158,7 +1158,6 @@ class StockManagerWooCommerceInit {
 
 					</tr>
 							<?php
-							// }
 						} elseif ( number_format( $product->get_stock_quantity(), 0, '', '' ) <= $lowStockValue ) {
 							// if stock is low
 							?>
@@ -1248,13 +1247,6 @@ class StockManagerWooCommerceInit {
 
 							if ( $post->class == 'StockManagerWooCommercePro' ) {
 
-								/*
-								echo "<div class='columns3 extendwp_opacity'><img src='".esc_url( $post->image )."' />
-								<h3>". esc_html( $post->title ) . "</h3>
-								<div>". wp_kses( $post->excerpt, $this->allowed_html )."</div>
-								<h4><i>". esc_html__( 'installed', 'products-stock-manager-excel' ) . "</i> <i class='fa fa-2x fa-check'></i></h4>
-								</div>";
-								*/
 							} else {
 
 								echo "<div class='columns3'><a target='_blank' href='" . esc_url( $post->url ) . "' /><img src='" . esc_url( $post->image ) . "' /></a>
