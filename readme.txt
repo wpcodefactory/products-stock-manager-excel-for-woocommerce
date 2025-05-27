@@ -90,6 +90,7 @@ This is available in the [PRO Version](https://extend-wp.com/product/products-st
 == Changelog ==
 
 = 3.0.0 - 27/05/2025 =
+* Fix - Translation loading fixed.
 * Dev - Code refactoring and cleanup.
 * WC tested up to: 9.8.
 * Tested up to: 6.8.

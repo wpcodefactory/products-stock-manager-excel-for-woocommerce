@@ -18,11 +18,25 @@
 
 defined( 'ABSPATH' ) || exit;
 
-defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0-dev-20250527-1053' );
+defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0-dev-20250527-1101' );
 
 defined( 'WPFACTORY_WC_SM_FILE' ) || define( 'WPFACTORY_WC_SM_FILE', __FILE__ );
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpfactory-wc-sm.php';
+
+if ( ! function_exists( 'wpfactory_wc_sm' ) ) {
+	/**
+	 * Returns the main instance of WPFactory_WC_SM to prevent the need to use globals.
+	 *
+	 * @version 3.0.0
+	 * @since   3.0.0
+	 */
+	function wpfactory_wc_sm() {
+		return WPFactory_WC_SM::instance();
+	}
+}
+
+add_action( 'plugins_loaded', 'wpfactory_wc_sm' );
 
 /**
  * class-main.php.
@@ -36,20 +50,25 @@ require_once plugin_dir_path( __FILE__ ) . '/class-main.php';
  */
 class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
-		public $plugin       = 'stockManagerWooCommerce';
-		public $name         = 'Products Stock Manager with Excel for WooCommerce';
-		public $shortName    = 'Stock Manager';
-		public $slug         = 'stock-manager-woocommerce';
-		public $dashicon     = 'dashicons-cart';
-		public $proUrl       = 'https://extend-wp.com/product/products-stock-manager-excel-woocommerce';
-		public $menuPosition = '50';
-		public $localizeBackend;
-		public $localizeFrontend;
-		public $description = 'Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate';
+	public $plugin       = 'stockManagerWooCommerce';
+	public $name         = 'Products Stock Manager with Excel for WooCommerce';
+	public $shortName    = 'Stock Manager';
+	public $slug         = 'stock-manager-woocommerce';
+	public $dashicon     = 'dashicons-cart';
+	public $proUrl       = 'https://extend-wp.com/product/products-stock-manager-excel-woocommerce';
+	public $menuPosition = '50';
+	public $description  = 'Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate';
 
+	public $localizeBackend;
+	public $localizeFrontend;
+
+	/**
+	 * Constructor.
+	 *
+	 * @version 3.0.0
+	 */
 	public function __construct() {
 
-		add_action( 'plugins_loaded', array( $this, 'translate' ) );
 		add_action( 'admin_init', array( $this, 'adminPanels' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'BackEndScripts' ) );
@@ -70,17 +89,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 		register_activation_hook( __FILE__, array( $this, 'onActivation' ) );
 		register_deactivation_hook( __FILE__, array( $this, 'onDeactivation' ) );
-
-		// HPOS compatibility declaration
-
-		add_action(
-			'before_woocommerce_init',
-			function () {
-				if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
-					\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
-				}
-			}
-		);
 
 		// deactivation survey
 
@@ -116,15 +124,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 	public function print_scripts() {
 				// if want to print some inline script
-	}
-
-	/**
-	 * translate.
-	 *
-	 * @version 3.0.0
-	 */
-	public function translate() {
-		load_plugin_textdomain( $this->plugin, false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
 	}
 
 	public function BackEndScripts( $hook ) {
