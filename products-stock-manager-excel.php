@@ -48,17 +48,15 @@ require_once plugin_dir_path( __FILE__ ) . '/class-main.php';
  * StockManagerWooCommerce class.
  *
  * @version 3.0.0
+ *
+ * @todo    (v3.0.0) remove `$name`, `$slug`, `$proUrl`?
  */
 class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
-	public $plugin       = 'stockManagerWooCommerce';
-	public $name         = 'Products Stock Manager with Excel for WooCommerce';
-	public $shortName    = 'Stock Manager';
-	public $slug         = 'stock-manager-woocommerce';
-	public $dashicon     = 'dashicons-cart';
-	public $proUrl       = 'https://extend-wp.com/product/products-stock-manager-excel-woocommerce';
-	public $menuPosition = '50';
-	public $description  = 'Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate';
+	public $plugin = 'stockManagerWooCommerce';
+	public $name   = 'Products Stock Manager with Excel for WooCommerce';
+	public $slug   = 'stock-manager-woocommerce';
+	public $proUrl = 'https://extend-wp.com/product/products-stock-manager-excel-woocommerce';
 
 	/**
 	 * Constructor.
