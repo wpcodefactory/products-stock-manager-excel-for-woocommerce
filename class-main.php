@@ -1,8 +1,11 @@
 <?php
+/**
+ * Products Stock Manager with Excel for WooCommerce Inventory - StockManagerWooCommerceInit Class
+ *
+ * @author  WPFactory
+ */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'PhpOffice\PhpSpreadsheet\IOFactory' ) ) {
 	include plugin_dir_path( __FILE__ ) . '/Classes/autoload.php';

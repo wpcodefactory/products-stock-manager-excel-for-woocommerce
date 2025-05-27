@@ -1,3 +1,9 @@
+/**
+ * Products Stock Manager with Excel for WooCommerce Inventory - Backend JS
+ *
+ * @author  WPFactory
+ */
+
 (function( $ ) {
 
 	$("body").on("click", ".stockManagerWooCommerce  .proVersion", function (e) {
