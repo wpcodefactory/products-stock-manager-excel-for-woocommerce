@@ -102,6 +102,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		add_action( 'admin_notices', array( $this, 'notification' ) );
 		add_action( 'wp_ajax_nopriv_push_not', array( $this, 'push_not' ) );
 		add_action( 'wp_ajax_push_not',        array( $this, 'push_not' ) );
+
 	}
 
 	/**
@@ -126,20 +127,20 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		}
 
 		wp_enqueue_style( esc_html( $this->plugin ) . 'adminCss', plugins_url( '/css/backend.css?v=adj', __FILE__ ) );
-		wp_enqueue_style( esc_html( $this->plugin ) . 'adminCss' );
 
 		wp_enqueue_script( 'jquery' );
+
 		wp_enqueue_media();
+
 		wp_enqueue_style( 'wp-color-picker' );
+
 		wp_enqueue_script( 'jquery-ui-tabs' );
+
 		wp_enqueue_script( esc_html( $this->plugin ) . 'xlsx', plugins_url( '/js/xlsx.js', __FILE__ ), array( 'jquery' ), null, true );
-		wp_enqueue_script( esc_html( $this->plugin ) . 'xlsx' );
 
 		wp_enqueue_script( esc_html( $this->plugin ) . 'filesaver', plugins_url( '/js/filesaver.js', __FILE__ ), array( 'jquery' ), null, true );
-		wp_enqueue_script( esc_html( $this->plugin ) . 'filesaver' );
 
 		wp_enqueue_script( esc_html( $this->plugin ) . 'tableexport', plugins_url( '/js/tableexport.js', __FILE__ ), array( 'jquery' ), null, true );
-		wp_enqueue_script( esc_html( $this->plugin ) . 'tableexport' );
 
 		if ( ! wp_script_is( esc_html( $this->plugin ) . '_fa', 'enqueued' ) ) {
 			wp_enqueue_style( esc_html( $this->plugin ) . '_fa', plugins_url( '/css/font-awesome.min.css', __FILE__ ) );
@@ -156,7 +157,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 			'plugin_wrapper' => esc_html( $this->plugin ),
 			'exportfile'     => plugins_url( '/js/tableexport.js', __FILE__ ),
 		) );
-		wp_enqueue_script( esc_html( $this->plugin ) . 'adminJs' );
 
 	}
 
@@ -216,7 +216,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 	 * notification.
 	 */
 	public function notification() {
-		/* Check transient, if available display notice */
+		// Check transient, if available display notice
 		if ( get_transient( 'stock_manager_notification' ) ) {
 			?>
 				<div class="updated notice  stock_manager_notification">
