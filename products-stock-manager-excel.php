@@ -9,7 +9,8 @@
  * WC tested up to: 9.8
  * Requires Plugins: woocommerce
  * Requires PHP: 8.1
- * License: GPL2
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Created On: 07-07-2020
  * Updated On: 27-05-2025
  * Text Domain: products-stock-manager-excel
