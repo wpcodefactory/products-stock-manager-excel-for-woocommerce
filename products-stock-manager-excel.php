@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0-dev-20250527-1101' );
+defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0-dev-20250527-1225' );
 
 defined( 'WPFACTORY_WC_SM_FILE' ) || define( 'WPFACTORY_WC_SM_FILE', __FILE__ );
 
@@ -119,6 +119,8 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 	 * BackEndScripts.
 	 *
 	 * @version 3.0.0
+	 *
+	 * @todo    (v3.0.0) clean up
 	 */
 	public function BackEndScripts( $hook ) {
 

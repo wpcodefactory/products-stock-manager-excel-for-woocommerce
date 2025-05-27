@@ -1,0 +1,441 @@
+# Copyright (C) 2025 WPFactory
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Products Stock Manager with Excel for WooCommerce Inventory 3.0.0-dev\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/products-stock-manager-with-excel\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-05-27T12:25:49+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: products-stock-manager-excel\n"
+
+#. Plugin Name of the plugin
+#: products-stock-manager-excel.php
+msgid "Products Stock Manager with Excel for WooCommerce Inventory"
+msgstr ""
+
+#. Description of the plugin
+#: products-stock-manager-excel.php
+msgid "Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate."
+msgstr ""
+
+#. Author of the plugin
+#: products-stock-manager-excel.php
+msgid "WPFactory"
+msgstr ""
+
+#. Author URI of the plugin
+#: products-stock-manager-excel.php
+msgid "https://wpfactory.com"
+msgstr ""
+
+#: class-main.php:209
+msgid "Update"
+msgstr ""
+
+#: class-main.php:210
+msgid "Export"
+msgstr ""
+
+#: class-main.php:211
+msgid "Report"
+msgstr ""
+
+#: class-main.php:212
+#: includes/class-wpfactory-wc-sm.php:149
+msgid "Settings"
+msgstr ""
+
+#: class-main.php:213
+msgid "GO PRO"
+msgstr ""
+
+#: class-main.php:276
+msgid "More Extensions"
+msgstr ""
+
+#: class-main.php:288
+msgid "You like this plugin? "
+msgstr ""
+
+#: class-main.php:288
+msgid "Then please give us "
+msgstr ""
+
+#: class-main.php:305
+msgid "Low Stock Value"
+msgstr ""
+
+#: class-main.php:329
+msgid "Yes"
+msgstr ""
+
+#: class-main.php:330
+msgid "No"
+msgstr ""
+
+#: class-main.php:355
+msgid "Select..."
+msgstr ""
+
+#: class-main.php:356
+msgid "Once every 1min"
+msgstr ""
+
+#: class-main.php:357
+msgid "Once every 30min"
+msgstr ""
+
+#: class-main.php:358
+msgid "Once every 1 hour"
+msgstr ""
+
+#: class-main.php:359
+msgid "Once every 6 hours"
+msgstr ""
+
+#: class-main.php:360
+msgid "Once every 12 hours"
+msgstr ""
+
+#: class-main.php:361
+msgid "Daily"
+msgstr ""
+
+#: class-main.php:362
+msgid "Weekly"
+msgstr ""
+
+#: class-main.php:363
+msgid "Monthly"
+msgstr ""
+
+#: class-main.php:372
+msgid "Add Stock for same Product from multiple Excel Rows"
+msgstr ""
+
+#: class-main.php:375
+msgid "Low Stock Value Identifier for Reports"
+msgstr ""
+
+#: class-main.php:378
+msgid "Auto Import with Cron"
+msgstr ""
+
+#: class-main.php:381
+msgid "Auto Import Excel URL"
+msgstr ""
+
+#: class-main.php:384
+msgid "Import Frequency"
+msgstr ""
+
+#: class-main.php:387
+msgid "Import Time"
+msgstr ""
+
+#: class-main.php:415
+msgid "UPDATE SIMPLE PRODUCTS stock,prices "
+msgstr ""
+
+#: class-main.php:416
+#: class-main.php:630
+msgid "- variable products in pro"
+msgstr ""
+
+#: class-main.php:420
+msgid "Download the sample excel file, insert stock numbers and update using the form below"
+msgstr ""
+
+#: class-main.php:422
+msgid "sample"
+msgstr ""
+
+#: class-main.php:445
+msgid "Upload"
+msgstr ""
+
+#: class-main.php:517
+msgid "regular price cannot be less than 0"
+msgstr ""
+
+#: class-main.php:520
+msgid "sale price cannot be less than 0"
+msgstr ""
+
+#: class-main.php:523
+msgid "stock number cannot be less than 0"
+msgstr ""
+
+#: class-main.php:536
+msgid "ID or SKU not provided"
+msgstr ""
+
+#: class-main.php:612
+msgid "updated successfully"
+msgstr ""
+
+#: class-main.php:616
+msgid "Product does not exist"
+msgstr ""
+
+#: class-main.php:629
+msgid "EXPORT SIMPLE PRODUCTS in the correct format for Update"
+msgstr ""
+
+#: class-main.php:633
+msgid "Important Note: always save the generated export file in xlsx format to a new excel for import use."
+msgstr ""
+
+#: class-main.php:652
+msgid "Filter & Fields to Show"
+msgstr ""
+
+#: class-main.php:661
+msgid "Keywords"
+msgstr ""
+
+#: class-main.php:664
+msgid "Search term"
+msgstr ""
+
+#: class-main.php:669
+#: class-main.php:928
+msgid "SKU"
+msgstr ""
+
+#: class-main.php:671
+msgid "Search by SKU"
+msgstr ""
+
+#: class-main.php:677
+#: class-main.php:680
+msgid "Regular Price"
+msgstr ""
+
+#: class-main.php:683
+msgid "Regular Price Selector"
+msgstr ""
+
+#: class-main.php:698
+#: class-main.php:701
+msgid "Sale Price"
+msgstr ""
+
+#: class-main.php:705
+msgid "Sale Price Selector"
+msgstr ""
+
+#: class-main.php:721
+msgid "Limit Results"
+msgstr ""
+
+#: class-main.php:724
+msgid "Number to display.."
+msgstr ""
+
+#: class-main.php:726
+msgid "Start from.."
+msgstr ""
+
+#: class-main.php:740
+msgid "FIELDS TO SHOW apart from stock, prices, id, sku and title  - PRO VERSION"
+msgstr ""
+
+#: class-main.php:784
+msgid "No Products to display..."
+msgstr ""
+
+#: class-main.php:904
+msgid "Wait... Download is loading..."
+msgstr ""
+
+#: class-main.php:925
+msgid "ID"
+msgstr ""
+
+#: class-main.php:931
+msgid "REGULAR PRICE"
+msgstr ""
+
+#: class-main.php:934
+msgid "SALE PRICE"
+msgstr ""
+
+#: class-main.php:937
+msgid "STOCK"
+msgstr ""
+
+#: class-main.php:940
+msgid "STOCK STATUS"
+msgstr ""
+
+#: class-main.php:943
+msgid "PRODUCT TITLE"
+msgstr ""
+
+#: class-main.php:1088
+msgid "No Product Found"
+msgstr ""
+
+#: class-main.php:1116
+msgid "General Stock Monitoring"
+msgstr ""
+
+#: class-main.php:1117
+msgid "Low stock is considered the number: "
+msgstr ""
+
+#: class-main.php:1122
+msgid "Title"
+msgstr ""
+
+#: class-main.php:1123
+msgid "Stock"
+msgstr ""
+
+#: class-main.php:1124
+msgid "Sales"
+msgstr ""
+
+#: class-main.php:1192
+msgid "Search..."
+msgstr ""
+
+#: class-main.php:1200
+msgid "No products"
+msgstr ""
+
+#: class-main.php:1243
+msgid "More Plugins to Make your life easier by ExtendWP!"
+msgstr ""
+
+#: class-main.php:1263
+msgid "Get it here"
+msgstr ""
+
+#: includes/class-wpfactory-wc-sm.php:189
+#: includes/class-wpfactory-wc-sm.php:190
+msgid "Stock Manager"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:29
+msgid "We are sorry to see you go..."
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:30
+msgid "If you would be kind enough, please tell us why you're deactivating?"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:31
+msgid "Please tell us which plugin?"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:32
+msgid "Please tell us the reason so we can improve the plugin"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:33
+msgid "Do not send my e-mail address with this feedback"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:35
+msgid "Please give us any feedback that could help us improve"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:37
+msgid "Cancel"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:38
+msgid "Skip &amp; Deactivate"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:39
+msgid "Submit &amp; Deactivate"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:40
+msgid "Please wait"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:41
+msgid "Thank you!"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:49
+msgid "The plugin suddenly stopped working"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:50
+msgid "The plugin broke my site"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:51
+msgid "I don't need this plugin any more"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:52
+msgid "I found a better plugin"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:53
+msgid "It's a temporary deactivation, I'm troubleshooting"
+msgstr ""
+
+#: lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php:54
+msgid "Other"
+msgstr ""
+
+#: products-stock-manager-excel.php:194
+msgid "Go PRO and get more important features!"
+msgstr ""
+
+#: products-stock-manager-excel.php:195
+msgid "Update stock & prices with excel for product variations with Excel"
+msgstr ""
+
+#: products-stock-manager-excel.php:196
+msgid "Export to Excel extra product fields"
+msgstr ""
+
+#: products-stock-manager-excel.php:197
+msgid "Automatically update with Cron from remote location"
+msgstr ""
+
+#: products-stock-manager-excel.php:198
+msgid "Automatically update from Google Spreadsheet"
+msgstr ""
+
+#: products-stock-manager-excel.php:199
+msgid "Predefine Update Mapping fields in settings"
+msgstr ""
+
+#: products-stock-manager-excel.php:200
+msgid ".. and a lot more!"
+msgstr ""
+
+#: products-stock-manager-excel.php:201
+msgid "GET IT HERE"
+msgstr ""
+
+#: products-stock-manager-excel.php:227
+msgid "Add your Email below & get "
+msgstr ""
+
+#: products-stock-manager-excel.php:227
+msgid " in our pro plugins! "
+msgstr ""
+
+#: products-stock-manager-excel.php:228
+msgid "By adding your email you will be able to use your email as coupon to a future purchase at "
+msgstr ""
+
+#: products-stock-manager-excel.php:231
+msgid "Sign up!"
+msgstr ""
