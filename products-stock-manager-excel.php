@@ -70,8 +70,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'BackEndScripts' ) );
 
-		add_action( 'admin_menu', array( $this, 'SettingsPage' ) );
-		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'Links' ) );
+		add_action( 'wpfactory_wc_sm_output_settings', array( $this, 'init' ) );
 
 		add_action( 'wp_ajax_nopriv_update_products', array( $this, 'update_products' ) );
 		add_action( 'wp_ajax_update_products', array( $this, 'update_products' ) );
@@ -114,6 +113,11 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		deactivate_plugins( $pro );
 	}
 
+	/**
+	 * BackEndScripts.
+	 *
+	 * @version 3.0.0
+	 */
 	public function BackEndScripts( $hook ) {
 
 		// $screen = get_current_screen();
@@ -154,15 +158,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		) );
 		wp_enqueue_script( esc_html( $this->plugin ) . 'adminJs' );
 
-	}
-
-	public function SettingsPage() {
-		add_submenu_page( 'woocommerce', esc_html( $this->shortName ), esc_html( $this->shortName ), 'manage_options', esc_html( $this->slug ), array( $this, 'init' ) );
-	}
-
-	public function Links( $links ) {
-		$mylinks[] = '<a href="' . admin_url( 'admin.php?page=' . $this->slug ) . '">' . esc_html__( 'Settings', 'products-stock-manager-excel' ) . '</a>';
-		return array_merge( $links, $mylinks );
 	}
 
 	public function init() {

@@ -115,7 +115,94 @@ final class WPFactory_WC_SM {
 	 * @since   3.0.0
 	 */
 	function admin() {
-		return true;
+
+		// Load libs
+		require_once plugin_dir_path( WPFACTORY_WC_SM_FILE ) . 'vendor/autoload.php';
+
+		// Action links
+		add_filter(
+			'plugin_action_links_' . plugin_basename( WPFACTORY_WC_SM_FILE ),
+			array( $this, 'action_links' )
+		);
+
+		// "Recommendations" page
+		add_action( 'init', array( $this, 'add_cross_selling_library' ) );
+
+		// Settings
+		add_filter( 'admin_menu', array( $this, 'add_settings' ), 11 );
+
+	}
+
+	/**
+	 * action_links.
+	 *
+	 * @version 3.0.0
+	 * @since   3.0.0
+	 *
+	 * @param   mixed $links
+	 * @return  array
+	 */
+	function action_links( $links ) {
+		$custom_links = array();
+
+		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=stock-manager-woocommerce' ) . '">' .
+			__( 'Settings', 'stockManagerWooCommerce' ) .
+		'</a>';
+
+		return array_merge( $custom_links, $links );
+	}
+
+	/**
+	 * add_cross_selling_library.
+	 *
+	 * @version 3.0.0
+	 * @since   3.0.0
+	 */
+	function add_cross_selling_library() {
+
+		if ( ! class_exists( '\WPFactory\WPFactory_Cross_Selling\WPFactory_Cross_Selling' ) ) {
+			return;
+		}
+
+		$cross_selling = new \WPFactory\WPFactory_Cross_Selling\WPFactory_Cross_Selling();
+		$cross_selling->setup( array( 'plugin_file_path' => WPFACTORY_WC_SM_FILE ) );
+		$cross_selling->init();
+
+	}
+
+	/**
+	 * add_settings.
+	 *
+	 * @version 3.0.0
+	 * @since   3.0.0
+	 */
+	function add_settings() {
+
+		if ( ! class_exists( 'WPFactory\WPFactory_Admin_Menu\WPFactory_Admin_Menu' ) ) {
+			return;
+		}
+
+		$admin_menu = WPFactory\WPFactory_Admin_Menu\WPFactory_Admin_Menu::get_instance();
+
+		add_submenu_page(
+			$admin_menu->get_menu_slug(),
+			__( 'Stock Manager', 'stockManagerWooCommerce' ),
+			__( 'Stock Manager', 'stockManagerWooCommerce' ),
+			'manage_woocommerce',
+			'stock-manager-woocommerce',
+			array( $this, 'output_settings' )
+		);
+
+	}
+
+	/**
+	 * output_settings.
+	 *
+	 * @version 3.0.0
+	 * @since   3.0.0
+	 */
+	function output_settings() {
+		do_action( 'wpfactory_wc_sm_output_settings' );
 	}
 
 	/**
