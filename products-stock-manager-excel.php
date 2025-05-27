@@ -59,9 +59,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 	public $menuPosition = '50';
 	public $description  = 'Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate';
 
-	public $localizeBackend;
-	public $localizeFrontend;
-
 	/**
 	 * Constructor.
 	 *
@@ -89,8 +86,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 		register_activation_hook( __FILE__, array( $this, 'onActivation' ) );
 
-		// deactivation survey
-
+		// Deactivation survey
 		include plugin_dir_path( __FILE__ ) . '/lib/codecabin/plugin-deactivation-survey/deactivate-feedback-form.php';
 		add_filter(
 			'codecabin_deactivate_feedback_form_plugins',
@@ -147,7 +143,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 
 		wp_enqueue_script( $this->plugin . 'adminJs', plugins_url( '/js/backend.js?v=1fss', __FILE__ ), array( 'jquery', 'wp-color-picker', 'jquery-ui-tabs' ), null, true );
 
-		$this->localizeBackend = array(
+		wp_localize_script( esc_html( $this->plugin ) . 'adminJs', $this->plugin, array(
 			'RestRoot'       => esc_url_raw( rest_url() ),
 			'plugin_url'     => plugins_url( '', __FILE__ ),
 			'siteUrl'        => site_url(),
@@ -155,9 +151,9 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 			'nonce'          => wp_create_nonce( 'wp_rest' ),
 			'plugin_wrapper' => esc_html( $this->plugin ),
 			'exportfile'     => plugins_url( '/js/tableexport.js', __FILE__ ),
-		);
-		wp_localize_script( esc_html( $this->plugin ) . 'adminJs', $this->plugin, $this->localizeBackend );
+		) );
 		wp_enqueue_script( esc_html( $this->plugin ) . 'adminJs' );
+
 	}
 
 	public function SettingsPage() {
@@ -232,6 +228,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 	public function push_not() {
 		delete_transient( 'stock_manager_notification' );
 	}
+
 }
 
 $instantiate = new StockManagerWooCommerce();
