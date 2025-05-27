@@ -88,7 +88,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		add_action( 'admin_footer', array( $this, 'proModal' ) );
 
 		register_activation_hook( __FILE__, array( $this, 'onActivation' ) );
-		register_deactivation_hook( __FILE__, array( $this, 'onDeactivation' ) );
 
 		// deactivation survey
 
@@ -113,17 +112,10 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		add_action( 'wp_ajax_push_not', array( $this, 'push_not' ) );
 	}
 
-
 	public function onActivation() {
 		require_once ABSPATH . '/wp-admin/includes/plugin.php';
 		$pro = '/stock-manager-woocommerce-pro/stock-manager-woocommerce-pro.php';
 		deactivate_plugins( $pro );
-	}
-	function onDeactivation() {
-	}
-
-	public function print_scripts() {
-				// if want to print some inline script
 	}
 
 	public function BackEndScripts( $hook ) {
@@ -168,7 +160,6 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		wp_enqueue_script( esc_html( $this->plugin ) . 'adminJs' );
 	}
 
-
 	public function SettingsPage() {
 		add_submenu_page( 'woocommerce', esc_html( $this->shortName ), esc_html( $this->shortName ), 'manage_options', esc_html( $this->slug ), array( $this, 'init' ) );
 	}
@@ -178,17 +169,13 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		return array_merge( $links, $mylinks );
 	}
 
-
-
 	public function init() {
 		print "<div class='" . esc_html( $this->plugin ) . "'>";
-
 			$this->adminHeader();
 			$this->adminSettings();
 			$this->adminFooter();
 		print '</div>';
 	}
-
 
 	public function proModal() {
 		?>
@@ -219,19 +206,12 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 			<?php
 	}
 
-
-
-
-		// Email notification form
-
+	// Email notification form
 	public function notification_hook() {
 		set_transient( 'stock_manager_notification', true );
 	}
 
-
-
 	public function notification() {
-
 		/* Check transient, if available display notice */
 		if ( get_transient( 'stock_manager_notification' ) ) {
 			?>
@@ -249,10 +229,9 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 		}
 	}
 
-
 	public function push_not() {
-
 		delete_transient( 'stock_manager_notification' );
 	}
 }
+
 $instantiate = new StockManagerWooCommerce();
