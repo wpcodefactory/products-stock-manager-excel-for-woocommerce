@@ -79,7 +79,7 @@ This is available in the [PRO Version](https://extend-wp.com/product/products-st
 
 == Changelog ==
 
-= 3.0.0 - 27/05/2025 =
+= 3.0.0 - 28/05/2025 =
 * Fix - Translation loading fixed.
 * Dev - Plugin settings moved to the "WPFactory" menu.
 * Dev - "Recommendations" added.

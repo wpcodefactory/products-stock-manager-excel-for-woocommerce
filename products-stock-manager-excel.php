@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Products Stock Manager with Excel for WooCommerce Inventory
  * Description: Update your WooCommerce Products Stock and Prices with the power of Excel, get stock reports - go pro & automate.
- * Version: 3.0.0-dev
+ * Version: 3.0.0
  * Author: WPFactory
  * Author URI: https://wpfactory.com
  * WC requires at least: 2.2
@@ -12,14 +12,14 @@
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Created On: 07-07-2020
- * Updated On: 27-05-2025
+ * Updated On: 28-05-2025
  * Text Domain: products-stock-manager-excel
  * Domain Path: /langs
  */
 
 defined( 'ABSPATH' ) || exit;
 
-defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0-dev-20250527-1225' );
+defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.0' );
 
 defined( 'WPFACTORY_WC_SM_FILE' ) || define( 'WPFACTORY_WC_SM_FILE', __FILE__ );
 
@@ -121,7 +121,7 @@ class StockManagerWooCommerce extends StockManagerWooCommerceInit {
 	 *
 	 * @version 3.0.0
 	 *
-	 * @todo    (v3.0.0) clean up
+	 * @todo    (v3.0.0) add `version`, etc.
 	 */
 	public function BackEndScripts( $hook ) {
 

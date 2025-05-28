@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Products Stock Manager with Excel for WooCommerce Inventory 3.0.0-dev\n"
+"Project-Id-Version: Products Stock Manager with Excel for WooCommerce Inventory 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/products-stock-manager-with-excel\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-27T12:25:49+00:00\n"
+"POT-Creation-Date: 2025-05-28T13:44:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: products-stock-manager-excel\n"
@@ -55,267 +55,267 @@ msgstr ""
 msgid "GO PRO"
 msgstr ""
 
-#: class-main.php:276
+#: class-main.php:275
 msgid "More Extensions"
 msgstr ""
 
-#: class-main.php:288
+#: class-main.php:287
 msgid "You like this plugin? "
 msgstr ""
 
-#: class-main.php:288
+#: class-main.php:287
 msgid "Then please give us "
 msgstr ""
 
-#: class-main.php:305
+#: class-main.php:304
 msgid "Low Stock Value"
 msgstr ""
 
-#: class-main.php:329
+#: class-main.php:327
 msgid "Yes"
 msgstr ""
 
-#: class-main.php:330
+#: class-main.php:328
 msgid "No"
 msgstr ""
 
-#: class-main.php:355
+#: class-main.php:353
 msgid "Select..."
 msgstr ""
 
-#: class-main.php:356
+#: class-main.php:354
 msgid "Once every 1min"
 msgstr ""
 
-#: class-main.php:357
+#: class-main.php:355
 msgid "Once every 30min"
 msgstr ""
 
-#: class-main.php:358
+#: class-main.php:356
 msgid "Once every 1 hour"
 msgstr ""
 
-#: class-main.php:359
+#: class-main.php:357
 msgid "Once every 6 hours"
 msgstr ""
 
-#: class-main.php:360
+#: class-main.php:358
 msgid "Once every 12 hours"
 msgstr ""
 
-#: class-main.php:361
+#: class-main.php:359
 msgid "Daily"
 msgstr ""
 
-#: class-main.php:362
+#: class-main.php:360
 msgid "Weekly"
 msgstr ""
 
-#: class-main.php:363
+#: class-main.php:361
 msgid "Monthly"
 msgstr ""
 
-#: class-main.php:372
+#: class-main.php:369
 msgid "Add Stock for same Product from multiple Excel Rows"
 msgstr ""
 
-#: class-main.php:375
+#: class-main.php:372
 msgid "Low Stock Value Identifier for Reports"
 msgstr ""
 
-#: class-main.php:378
+#: class-main.php:375
 msgid "Auto Import with Cron"
 msgstr ""
 
-#: class-main.php:381
+#: class-main.php:378
 msgid "Auto Import Excel URL"
 msgstr ""
 
-#: class-main.php:384
+#: class-main.php:381
 msgid "Import Frequency"
 msgstr ""
 
-#: class-main.php:387
+#: class-main.php:384
 msgid "Import Time"
 msgstr ""
 
-#: class-main.php:415
+#: class-main.php:411
 msgid "UPDATE SIMPLE PRODUCTS stock,prices "
 msgstr ""
 
-#: class-main.php:416
-#: class-main.php:630
+#: class-main.php:412
+#: class-main.php:624
 msgid "- variable products in pro"
 msgstr ""
 
-#: class-main.php:420
+#: class-main.php:416
 msgid "Download the sample excel file, insert stock numbers and update using the form below"
 msgstr ""
 
-#: class-main.php:422
+#: class-main.php:418
 msgid "sample"
 msgstr ""
 
-#: class-main.php:445
+#: class-main.php:440
 msgid "Upload"
 msgstr ""
 
-#: class-main.php:517
+#: class-main.php:512
 msgid "regular price cannot be less than 0"
 msgstr ""
 
-#: class-main.php:520
+#: class-main.php:515
 msgid "sale price cannot be less than 0"
 msgstr ""
 
-#: class-main.php:523
+#: class-main.php:518
 msgid "stock number cannot be less than 0"
 msgstr ""
 
-#: class-main.php:536
+#: class-main.php:531
 msgid "ID or SKU not provided"
 msgstr ""
 
-#: class-main.php:612
+#: class-main.php:607
 msgid "updated successfully"
 msgstr ""
 
-#: class-main.php:616
+#: class-main.php:611
 msgid "Product does not exist"
 msgstr ""
 
-#: class-main.php:629
+#: class-main.php:623
 msgid "EXPORT SIMPLE PRODUCTS in the correct format for Update"
 msgstr ""
 
-#: class-main.php:633
+#: class-main.php:627
 msgid "Important Note: always save the generated export file in xlsx format to a new excel for import use."
 msgstr ""
 
-#: class-main.php:652
+#: class-main.php:646
 msgid "Filter & Fields to Show"
 msgstr ""
 
-#: class-main.php:661
+#: class-main.php:654
 msgid "Keywords"
 msgstr ""
 
-#: class-main.php:664
+#: class-main.php:657
 msgid "Search term"
 msgstr ""
 
-#: class-main.php:669
-#: class-main.php:928
+#: class-main.php:662
+#: class-main.php:920
 msgid "SKU"
 msgstr ""
 
-#: class-main.php:671
+#: class-main.php:664
 msgid "Search by SKU"
 msgstr ""
 
-#: class-main.php:677
-#: class-main.php:680
+#: class-main.php:670
+#: class-main.php:673
 msgid "Regular Price"
 msgstr ""
 
-#: class-main.php:683
+#: class-main.php:676
 msgid "Regular Price Selector"
 msgstr ""
 
-#: class-main.php:698
-#: class-main.php:701
+#: class-main.php:691
+#: class-main.php:694
 msgid "Sale Price"
 msgstr ""
 
-#: class-main.php:705
+#: class-main.php:698
 msgid "Sale Price Selector"
 msgstr ""
 
-#: class-main.php:721
+#: class-main.php:714
 msgid "Limit Results"
 msgstr ""
 
-#: class-main.php:724
+#: class-main.php:717
 msgid "Number to display.."
 msgstr ""
 
-#: class-main.php:726
+#: class-main.php:719
 msgid "Start from.."
 msgstr ""
 
-#: class-main.php:740
+#: class-main.php:732
 msgid "FIELDS TO SHOW apart from stock, prices, id, sku and title  - PRO VERSION"
 msgstr ""
 
-#: class-main.php:784
+#: class-main.php:776
 msgid "No Products to display..."
 msgstr ""
 
-#: class-main.php:904
+#: class-main.php:896
 msgid "Wait... Download is loading..."
 msgstr ""
 
-#: class-main.php:925
+#: class-main.php:917
 msgid "ID"
 msgstr ""
 
-#: class-main.php:931
+#: class-main.php:923
 msgid "REGULAR PRICE"
 msgstr ""
 
-#: class-main.php:934
+#: class-main.php:926
 msgid "SALE PRICE"
 msgstr ""
 
-#: class-main.php:937
+#: class-main.php:929
 msgid "STOCK"
 msgstr ""
 
-#: class-main.php:940
+#: class-main.php:932
 msgid "STOCK STATUS"
 msgstr ""
 
-#: class-main.php:943
+#: class-main.php:935
 msgid "PRODUCT TITLE"
 msgstr ""
 
-#: class-main.php:1088
+#: class-main.php:1079
 msgid "No Product Found"
 msgstr ""
 
-#: class-main.php:1116
+#: class-main.php:1107
 msgid "General Stock Monitoring"
 msgstr ""
 
-#: class-main.php:1117
+#: class-main.php:1108
 msgid "Low stock is considered the number: "
 msgstr ""
 
-#: class-main.php:1122
+#: class-main.php:1113
 msgid "Title"
 msgstr ""
 
-#: class-main.php:1123
+#: class-main.php:1114
 msgid "Stock"
 msgstr ""
 
-#: class-main.php:1124
+#: class-main.php:1115
 msgid "Sales"
 msgstr ""
 
-#: class-main.php:1192
+#: class-main.php:1182
 msgid "Search..."
 msgstr ""
 
-#: class-main.php:1200
+#: class-main.php:1190
 msgid "No products"
 msgstr ""
 
-#: class-main.php:1243
+#: class-main.php:1233
 msgid "More Plugins to Make your life easier by ExtendWP!"
 msgstr ""
 
-#: class-main.php:1263
+#: class-main.php:1246
 msgid "Get it here"
 msgstr ""
 
@@ -392,50 +392,50 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: products-stock-manager-excel.php:194
+#: products-stock-manager-excel.php:195
 msgid "Go PRO and get more important features!"
 msgstr ""
 
-#: products-stock-manager-excel.php:195
+#: products-stock-manager-excel.php:196
 msgid "Update stock & prices with excel for product variations with Excel"
 msgstr ""
 
-#: products-stock-manager-excel.php:196
+#: products-stock-manager-excel.php:197
 msgid "Export to Excel extra product fields"
 msgstr ""
 
-#: products-stock-manager-excel.php:197
+#: products-stock-manager-excel.php:198
 msgid "Automatically update with Cron from remote location"
 msgstr ""
 
-#: products-stock-manager-excel.php:198
+#: products-stock-manager-excel.php:199
 msgid "Automatically update from Google Spreadsheet"
 msgstr ""
 
-#: products-stock-manager-excel.php:199
+#: products-stock-manager-excel.php:200
 msgid "Predefine Update Mapping fields in settings"
 msgstr ""
 
-#: products-stock-manager-excel.php:200
+#: products-stock-manager-excel.php:201
 msgid ".. and a lot more!"
 msgstr ""
 
-#: products-stock-manager-excel.php:201
+#: products-stock-manager-excel.php:202
 msgid "GET IT HERE"
 msgstr ""
 
-#: products-stock-manager-excel.php:227
+#: products-stock-manager-excel.php:228
 msgid "Add your Email below & get "
 msgstr ""
 
-#: products-stock-manager-excel.php:227
+#: products-stock-manager-excel.php:228
 msgid " in our pro plugins! "
 msgstr ""
 
-#: products-stock-manager-excel.php:228
+#: products-stock-manager-excel.php:229
 msgid "By adding your email you will be able to use your email as coupon to a future purchase at "
 msgstr ""
 
-#: products-stock-manager-excel.php:231
+#: products-stock-manager-excel.php:232
 msgid "Sign up!"
 msgstr ""
