@@ -12,8 +12,6 @@
 
 /* === Header Elements === */
 
-
-
 /* === Footer Elements === */
 .web_logo{
 	float:right;
@@ -73,9 +71,7 @@
 	text-align:center;
 }
 
-
 /* ======= Excel Upload Elements ======= */
-
 
 .stockManagerWooCommerce .uploader {
 	position:relative;
@@ -222,11 +218,9 @@
 		padding:5px;
 }
 
-
 .stockManagerWooCommerce .exportTableWrapper{
 	overflow-x:scroll;
 }
-
 
 .stockManagerWooCommerce th{
 	text-align:center;
@@ -297,7 +291,6 @@ span.proVersion{
 	margin-bottom:30px;
 }
 
-
 /* The Close Button */
 #stockManagerWooCommerceModal .close , .extendwp_close {
 	color: #aaa;
@@ -338,7 +331,6 @@ span.proVersion{
 	margin-left:30px;
 }
 
-
 .extendwp_extensions:hover,.extendwp_extensions:active,.extendwp_extensions:focus, .extendwp_extensions_content .button_extensions:hover {
 	background:#21b384;
 	border:none;
@@ -371,7 +363,6 @@ span.proVersion{
 		padding:10px !important;
 		box-sizing:border-box !important;
 	}
-
 
 	.stockManagerWooCommercecolumns2{
 		float:none !important;

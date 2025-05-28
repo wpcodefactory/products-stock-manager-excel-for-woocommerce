@@ -267,7 +267,6 @@ class StockManagerWooCommerceInit {
 		}
 	}
 
-
 	public function adminFooter() {
 		?>
 				<hr>
@@ -313,7 +312,6 @@ class StockManagerWooCommerceInit {
 
 		<?php
 	}
-
 
 	public function importUrl() {
 		?>
@@ -365,7 +363,6 @@ class StockManagerWooCommerceInit {
 		<?php
 	}
 
-
 	public function adminPanels() {
 		add_settings_section( esc_html( $this->plugin ) . 'general', '', null, esc_html( $this->plugin ) . 'general-options' );
 
@@ -387,7 +384,6 @@ class StockManagerWooCommerceInit {
 		add_settings_field( 'importTime', "<span class='proVersion'>" . esc_html__( 'Import Time', 'products-stock-manager-excel' ) . '<span>', array( $this, 'importTime' ), $this->plugin . 'general-options', esc_html( $this->plugin ) . 'general' );
 		register_setting( esc_html( $this->plugin ) . 'general', esc_html( $this->plugin ) . $this->importTime );
 	}
-
 
 	public function adminProcessSettings() {
 
@@ -423,7 +419,6 @@ class StockManagerWooCommerceInit {
 			</a>
 
 		</p>
-
 
 		<div>
 			<form method="post" id='product_update' enctype="multipart/form-data" action= "<?php echo esc_url( admin_url( 'admin.php?page=stock-manager-woocommerce&tab=import' ) ); ?>">
@@ -621,7 +616,6 @@ class StockManagerWooCommerceInit {
 		}
 	}
 
-
 	public function exportProductsDisplay() {
 
 		?>
@@ -651,7 +645,6 @@ class StockManagerWooCommerceInit {
 				<p class='exportToggler button button-secondary warning   btn btn-danger'><i class='fa fa-eye '></i>
 					<?php esc_html_e( 'Filter & Fields to Show', 'products-stock-manager-excel' ); ?>
 				</p>
-
 
 				<form name='exportProductsForm' id='exportProductsForm' method='post' action= "<?php echo admin_url( 'admin.php?page=stock-manager-woocommerce&tab=export' ); ?>" >
 					<table class='wp-list-table widefat fixed table table-bordered'>
@@ -732,7 +725,6 @@ class StockManagerWooCommerceInit {
 					</table>
 
 					<?php $taxonomy_objects = get_object_taxonomies( 'product', 'objects' ); ?>
-
 
 					<table class='wp-list-table widefat fixed table table-bordered fields_checks'>
 						<legend>
@@ -953,7 +945,6 @@ class StockManagerWooCommerceInit {
 
 		}//check request
 	}
-
 
 	public function smw_exportProducts() {
 

@@ -36,7 +36,6 @@
 		$('.stockManagerWooCommerce .color').wpColorPicker();
 	});
 
-
 		//EXTENSIONS
 		$(".extendwp_extensions").click(function(e){
 			e.preventDefault();
@@ -115,7 +114,6 @@
 			});
 		});
 
-
 	$('.stockManagerWooCommerce #upload').attr('disabled','disabled');
 	$(".stockManagerWooCommerce .smwFile").on('change',function () {
 		var smprofileExtension = ['xls', 'xlsx'];
@@ -167,11 +165,8 @@
 				$(".stockManagerWooCommerce #selectTaxonomy").slideToggle();
 			});
 
-
-
 			$(".stockManagerWooCommerce #exportProductsForm").on('submit',function(e) {
 					e.preventDefault();
-
 
 				$.ajax({
 					url: $(this).attr('action'),
@@ -181,8 +176,6 @@
 						$('.stockManagerWooCommerce').addClass('loading');
 					},
 					success: function(response){
-
-
 
 						$('.stockManagerWooCommerce').removeClass('loading');
 
@@ -217,7 +210,6 @@
 										$('.stockManagerWooCommerce .message').removeClass('error');
 
 										$(".stockManagerWooCommerce #toskuExport").tableExport();
-
 
 									}else{
 
@@ -255,8 +247,6 @@
 					});
 
 			});
-
-
 
 		$("#stock_manager_signup").on('submit',function(e){
 			e.preventDefault();
@@ -304,6 +294,5 @@
 					$(".stock_manager_notification").fadeOut();
 				});
 		});
-
 
 })( jQuery )
