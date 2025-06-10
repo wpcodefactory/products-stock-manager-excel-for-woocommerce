@@ -4,7 +4,7 @@ Tags:  update stock, stock export, stock manager, stock management, inventory, e
 Requires at least: 3.0.1
 Requires PHP: 8.1
 Tested up to: 6.8
-Stable tag: 3.0.1
+Stable tag: 3.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ This is available in the [PRO Version](https://extend-wp.com/product/products-st
 4. Backend Settings Page
 
 == Changelog ==
+
+= 3.0.2 - 10/06/2025 =
+* Fix - Fix plugin icon.
 
 = 3.0.1 - 06/06/2025 =
 * Dev - Updated plugin icon and banner.
