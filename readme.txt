@@ -3,8 +3,8 @@ Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags:  update stock, stock export, stock manager, stock management, inventory, excel, stock , woocommerce
 Requires at least: 3.0.1
 Requires PHP: 8.1
-Tested up to: 6.8
-Stable tag: 3.0.3
+Tested up to: 7.0
+Stable tag: 3.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,10 @@ This is available in the [PRO Version](https://extend-wp.com/product/products-st
 4. Backend Settings Page
 
 == Changelog ==
+
+= 3.0.4 - 24/05/2026 =
+* Tested up to: 7.0.
+* WC tested up to: 10.7.
 
 = 3.0.3 - 16/09/2025 =
 * WC tested up to: 10.1.
