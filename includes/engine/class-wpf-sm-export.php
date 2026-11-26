@@ -303,7 +303,7 @@ if ( ! class_exists( 'WPF_SM_Export' ) ) :
 				return null;
 			}
 			$since = gmdate( 'Y-m-d H:i:s', time() - (int) $days * DAY_IN_SECONDS );
-			$rows  = $wpdb->get_results( $wpdb->prepare( "SELECT l.product_id, l.variation_id, SUM(l.product_qty) qty FROM {$t} l JOIN {$s} o ON o.order_id = l.order_id WHERE l.date_created >= %s AND o.status NOT IN ('wc-refunded','wc-cancelled','wc-failed','wc-pending','wc-checkout-draft','trash') GROUP BY l.product_id, l.variation_id", $since ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$rows  = $wpdb->get_results( $wpdb->prepare( "SELECT l.product_id, l.variation_id, SUM(l.product_qty) qty FROM {$t} l JOIN {$s} o ON o.order_id = l.order_id WHERE l.date_created >= %s AND o.status NOT IN ('wc-refunded','wc-cancelled','wc-failed','wc-pending','wc-checkout-draft','trash') GROUP BY l.product_id, l.variation_id", $since ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- table names from $wpdb->prefix.
 			$out   = array();
 			foreach ( $rows as $r ) {
 				$id         = (int) $r->variation_id ? (int) $r->variation_id : (int) $r->product_id;

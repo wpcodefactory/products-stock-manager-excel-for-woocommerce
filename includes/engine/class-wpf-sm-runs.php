@@ -254,8 +254,8 @@ if ( ! class_exists( 'WPF_SM_Runs' ) ) :
 			global $wpdb;
 			$in    = implode( ',', array_fill( 0, count( $states ), '%s' ) );
 			$args  = array_merge( array( self::TYPE ), array_map( function ( $s ) { return 'wpf-sm/' . $s; }, $states ) ); // phpcs:ignore Generic.Functions.OpeningFunctionBraceKernighanRitchie
-			$total = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_type = %s AND post_mime_type IN ($in)", $args ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-			$ids   = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = %s AND post_mime_type IN ($in) ORDER BY ID DESC LIMIT %d OFFSET %d", array_merge( $args, array( $per_page, max( 0, $page - 1 ) * $per_page ) ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+			$total = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_type = %s AND post_mime_type IN ($in)", $args ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- IN list built from placeholders.
+			$ids   = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_type = %s AND post_mime_type IN ($in) ORDER BY ID DESC LIMIT %d OFFSET %d", array_merge( $args, array( $per_page, max( 0, $page - 1 ) * $per_page ) ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- IN list built from placeholders.
 			return array(
 				'runs'  => array_filter( array_map( array( __CLASS__, 'get' ), array_map( 'intval', $ids ) ) ),
 				'total' => $total,

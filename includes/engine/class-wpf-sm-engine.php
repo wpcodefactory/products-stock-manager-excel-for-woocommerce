@@ -901,7 +901,7 @@ if ( ! class_exists( 'WPF_SM_Engine' ) ) :
 				array(
 					'state'     => 'writing',
 					'cursor'    => 0,
-					'exclude'   => array_map( 'intval', (array) $exclude ),
+					'skip_ids'  => array_map( 'intval', (array) $exclude ),
 					'started'   => time(),
 					'by'        => get_current_user_id(),
 					'expires'   => time() + max( 1, $keep ) * DAY_IN_SECONDS,
@@ -932,7 +932,7 @@ if ( ! class_exists( 'WPF_SM_Engine' ) ) :
 		protected static function write_chunk( $run ) {
 			$n       = (int) $run['cursor'];
 			$plan    = WPF_SM_Runs::chunk( $run['id'], 'plan', $n );
-			$exclude = array_flip( isset( $run['exclude'] ) ? (array) $run['exclude'] : array() );
+			$exclude = array_flip( isset( $run['skip_ids'] ) ? (array) $run['skip_ids'] : array() );
 			$backup  = array();
 			$result  = array();
 			$parents = array();
@@ -1124,8 +1124,8 @@ if ( ! class_exists( 'WPF_SM_Engine' ) ) :
 			if ( ! $items ) {
 				return new WP_Error( 'wpf_sm_no_backup', __( 'This update did not change any product, so there is nothing to restore.', 'products-stock-manager-with-excel' ) );
 			}
-			/* translators: %s: name of the file of the update being undone */
 			$new = WPF_SM_Runs::create(
+				/* translators: %s: name of the file of the update being undone */
 				sprintf( __( 'Restore: %s', 'products-stock-manager-with-excel' ), $run['title'] ),
 				array(
 					'state'       => 'comparing',

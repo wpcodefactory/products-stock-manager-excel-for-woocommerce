@@ -79,8 +79,7 @@ final class WPFactory_WC_SM {
 			)
 		);
 
-		// Set up localisation
-		add_action( 'init', array( $this, 'localize' ) );
+		// Translations load by slug from WordPress.org (text domain = slug).
 
 		// Declare compatibility with custom order tables for WooCommerce
 		add_action( 'before_woocommerce_init', array( $this, 'wc_declare_compatibility' ) );
@@ -92,21 +91,7 @@ final class WPFactory_WC_SM {
 
 	}
 
-	/**
-	 * localize.
-	 *
-	 * @version 3.0.0
-	 * @since   3.0.0
-	 *
-	 * @todo    (v3.0.0) text domain should be `products-stock-manager-with-excel`
-	 */
-	function localize() {
-		load_plugin_textdomain(
-			'products-stock-manager-with-excel',
-			false,
-			dirname( plugin_basename( WPFACTORY_WC_SM_FILE ) ) . '/langs/'
-		);
-	}
+
 
 	/**
 	 * wc_declare_compatibility.

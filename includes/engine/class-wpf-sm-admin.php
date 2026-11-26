@@ -597,6 +597,7 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 		 * @param array $run Run.
 		 */
 		protected function view_columns( $run ) {
+			/* translators: %s: number of rows */
 			$this->head( __( 'Check the columns', 'products-stock-manager-with-excel' ), esc_html( $run['title'] ) . ' &middot; ' . esc_html( sprintf( _n( '%s row', '%s rows', (int) $run['lines'], 'products-stock-manager-with-excel' ), number_format_i18n( (int) $run['lines'] ) ) ) );
 			$opts   = $run['options'];
 			$map    = (array) $run['map'];
@@ -1208,7 +1209,7 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 				$this->back( $this->url( array( 'tab' => 'import' ) ), 'bad', __( 'This update no longer exists. Upload the file again.', 'products-stock-manager-with-excel' ) );
 			}
 			$map = array();
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing -- nonce checked in guard().
 			foreach ( (array) ( isset( $_POST['map'] ) ? wp_unslash( $_POST['map'] ) : array() ) as $i => $key ) {
 				$key = sanitize_text_field( $key );
 				if ( '' !== $key && ! WPF_SM_Fields::get( $key ) ) {
@@ -1390,7 +1391,7 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 		 */
 		public function handle_settings() {
 			$this->guard( 'settings' );
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing -- nonce checked in guard().
 			$in  = isset( $_POST['s'] ) ? (array) wp_unslash( $_POST['s'] ) : array();
 			$old = get_option( 'wpfactory_wc_sm_settings', array() );
 			$old = is_array( $old ) ? $old : array();
