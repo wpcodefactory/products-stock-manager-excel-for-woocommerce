@@ -3,7 +3,7 @@
  * Stock Manager AI on WPFactory AI credits: match columns, suggest matches for skipped rows, suggest what to reorder.
  *
  * Nothing is sent until an administrator connects the site on WPFactory > AI Credits. Every AI answer is a suggestion
- * the merchant accepts; AI never writes to the store. Calls offer one tool and ask for it, so answers are JSON. Failed or empty
+ * the merchant accepts; AI never writes to the store. Calls force one tool (Haiku) or ask for it (Sonnet), so answers are JSON. Failed or empty
  * answers are refunded. The filter `wpfactory_wc_sm_ai_response` answers instead of WPFactory AI (tests, own key).
  *
  * @package products-stock-manager-with-excel
@@ -135,14 +135,19 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 						'input_schema' => $schema,
 					),
 				),
-				// A forced tool needs thinking off: the 5.5 models think by default and then refuse a forced tool.
-				'thinking'    => array( 'type' => 'disabled' ),
 				'tool_choice' => array(
 					'type' => 'tool',
 					'name' => $tool,
 				),
 			);
-			$body['system'] .= ' Always answer by calling the ' . $tool . ' tool exactly once, with no other text.';
+			$body['system'] .= ' Answer only by calling the ' . $tool . ' tool, exactly once, with no other text.';
+			if ( false === strpos( $model, 'haiku' ) ) {
+				// Sonnet 5.5 refuses any forced tool and "thinking disabled" (AI server README, 2026-11-26): let it
+				// choose, make the tool strict, keep thinking between tool calls only. No tool block = failed, refunded.
+				$body['tool_choice']        = array( 'type' => 'auto' );
+				$body['tools'][0]['strict'] = true;
+				$body['thinking']           = array( 'type' => 'between_tools' );
+			}
 			/**
 			 * Answer an AI call instead of WPFactory AI (tests, own key). Return null to use credits, an Anthropic
 			 * message array (with `content`), or WP_Error.
@@ -166,12 +171,7 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 					return new WP_Error( 'wpf_sm_ai_off', __( 'Turn on AI first: connect this site on WPFactory > AI Credits.', 'products-stock-manager-with-excel' ) );
 				}
 				$r = $ai->call( self::PRODUCT, $body, array( 'task' => $task ) );
-				if ( is_wp_error( $r ) && preg_match( '/thinking|tool_choice/i', $r->get_error_message() ) ) {
-					// The model does not take these settings: let it think and choose the tool itself.
-					unset( $body['thinking'] );
-					$body['tool_choice'] = array( 'type' => 'auto' );
-					$r                   = $ai->call( self::PRODUCT, $body, array( 'task' => $task ) );
-				}
+
 				if ( is_wp_error( $r ) ) {
 					if ( false !== stripos( $r->get_error_message(), 'X-WPFactory-Product' ) ) {
 						return new WP_Error( 'wpf_sm_ai_unknown', __( 'WPFactory AI does not run Stock Manager tasks yet. Nothing was charged. Please try again later.', 'products-stock-manager-with-excel' ) );
@@ -186,18 +186,6 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 						'input'      => (array) $block['input'],
 						'request_id' => (string) $r['request_id'],
 					);
-				}
-			}
-			// A model that answered in text: use the JSON object in it when there is one.
-			foreach ( $blocks as $block ) {
-				if ( isset( $block['type'], $block['text'] ) && 'text' === $block['type'] && preg_match( '/\{.*\}/s', $block['text'], $m ) ) {
-					$json = json_decode( $m[0], true );
-					if ( is_array( $json ) && $json ) {
-						return array(
-							'input'      => $json,
-							'request_id' => (string) $r['request_id'],
-						);
-					}
 				}
 			}
 			set_transient(
