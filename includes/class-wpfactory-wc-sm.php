@@ -61,8 +61,25 @@ final class WPFactory_WC_SM {
 			return;
 		}
 
-		// Set up localisation
-		add_action( 'init', array( $this, 'localize' ) );
+		// Pro has every free feature: when it runs, the free plugin stays quiet.
+		if ( defined( 'WPFACTORY_WC_SM_PRO_VERSION' ) ) {
+			add_action( 'after_plugin_row_' . plugin_basename( WPFACTORY_WC_SM_FILE ), array( $this, 'pro_active_row' ), 10, 0 );
+			return;
+		}
+
+		// Engine and screens.
+		require_once plugin_dir_path( WPFACTORY_WC_SM_FILE ) . 'includes/engine/load.php';
+		new WPF_SM_Admin(
+			array(
+				'page'          => 'stock-manager-woocommerce',
+				'edition'       => 'free',
+				'file'          => WPFACTORY_WC_SM_FILE,
+				'version'       => WPFACTORY_WC_SM_VERSION,
+				'output_action' => 'wpfactory_wc_sm_output_settings',
+			)
+		);
+
+		// Translations load by slug from WordPress.org (text domain = slug).
 
 		// Declare compatibility with custom order tables for WooCommerce
 		add_action( 'before_woocommerce_init', array( $this, 'wc_declare_compatibility' ) );
@@ -74,21 +91,7 @@ final class WPFactory_WC_SM {
 
 	}
 
-	/**
-	 * localize.
-	 *
-	 * @version 3.0.0
-	 * @since   3.0.0
-	 *
-	 * @todo    (v3.0.0) text domain should be `products-stock-manager-with-excel`
-	 */
-	function localize() {
-		load_plugin_textdomain(
-			'products-stock-manager-excel',
-			false,
-			dirname( plugin_basename( WPFACTORY_WC_SM_FILE ) ) . '/langs/'
-		);
-	}
+
 
 	/**
 	 * wc_declare_compatibility.
@@ -146,7 +149,7 @@ final class WPFactory_WC_SM {
 		$custom_links = array();
 
 		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=stock-manager-woocommerce' ) . '">' .
-			__( 'Settings', 'products-stock-manager-excel' ) .
+			__( 'Settings', 'products-stock-manager-with-excel' ) .
 		'</a>';
 
 		return array_merge( $custom_links, $links );
@@ -186,8 +189,8 @@ final class WPFactory_WC_SM {
 
 		add_submenu_page(
 			$admin_menu->get_menu_slug(),
-			__( 'Stock Manager', 'products-stock-manager-excel' ),
-			__( 'Stock Manager', 'products-stock-manager-excel' ),
+			__( 'Stock Manager', 'products-stock-manager-with-excel' ),
+			__( 'Stock Manager', 'products-stock-manager-with-excel' ),
 			'manage_woocommerce',
 			'stock-manager-woocommerce',
 			array( $this, 'output_settings' )
@@ -213,6 +216,15 @@ final class WPFactory_WC_SM {
 	 *
 	 * @return  string
 	 */
+	/**
+	 * Line under the plugin on the Plugins screen while Pro is active.
+	 */
+	function pro_active_row() {
+		echo '<tr class="plugin-update-tr active"><td colspan="4" class="plugin-update colspanchange"><div class="notice inline notice-info notice-alt"><p>' .
+			esc_html__( 'Stock Manager Pro is active and includes everything in this plugin, so this plugin is not used. You can deactivate it.', 'products-stock-manager-with-excel' ) .
+			'</p></div></td></tr>';
+	}
+
 	function plugin_url() {
 		return untrailingslashit( plugin_dir_url( WPFACTORY_WC_SM_FILE ) );
 	}
