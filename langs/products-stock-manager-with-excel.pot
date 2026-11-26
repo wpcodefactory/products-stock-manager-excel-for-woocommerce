@@ -2,12 +2,12 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Products Stock Manager with Excel for WooCommerce\n"
+"Project-Id-Version: Stock Manager with Excel for WooCommerce\n"
 "Report-Msgid-Bugs-To: https://wpfactory.com/\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-26T14:17:11+00:00\n"
+"POT-Creation-Date: 2026-11-26T15:40:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: products-stock-manager-with-excel\n"
@@ -1126,24 +1126,24 @@ msgstr ""
 msgid "Reorder suggestions are ready below."
 msgstr ""
 
-#: includes/engine/class-wpf-sm-engine.php:100
+#: includes/engine/class-wpf-sm-engine.php:106
 msgid "The update could not be saved in the database."
 msgstr ""
 
-#: includes/engine/class-wpf-sm-engine.php:1010
+#: includes/engine/class-wpf-sm-engine.php:1016
 msgid "The product no longer exists."
 msgstr ""
 
-#: includes/engine/class-wpf-sm-engine.php:1109
+#: includes/engine/class-wpf-sm-engine.php:1115
 msgid "The backup of this update is no longer kept."
 msgstr ""
 
-#: includes/engine/class-wpf-sm-engine.php:1125
+#: includes/engine/class-wpf-sm-engine.php:1131
 msgid "This update did not change any product, so there is nothing to restore."
 msgstr ""
 
 #. translators: %s: name of the file of the update being undone
-#: includes/engine/class-wpf-sm-engine.php:1129
+#: includes/engine/class-wpf-sm-engine.php:1135
 msgid "Restore: %s"
 msgstr ""
 
@@ -1254,7 +1254,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: products-stock-manager-excel.php
-msgid "Products Stock Manager with Excel for WooCommerce Inventory"
+msgid "Stock Manager with Excel for WooCommerce"
 msgstr ""
 
 #. Description of the plugin

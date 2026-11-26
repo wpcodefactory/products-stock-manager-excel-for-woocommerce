@@ -1,4 +1,4 @@
-=== Products Stock Manager with Excel for WooCommerce Inventory ===
+=== Stock Manager with Excel for WooCommerce ===
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: stock, inventory, excel, csv, woocommerce
 Requires at least: 6.2

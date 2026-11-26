@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Products Stock Manager with Excel for WooCommerce Inventory
+ * Plugin Name: Stock Manager with Excel for WooCommerce
  * Description: Update stock and prices from an Excel or CSV file. See every change before it is saved, undo any update, export products with variations, and see what is running low.
  * Version: 3.0.4
  * Author: WPFactory
