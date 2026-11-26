@@ -373,8 +373,8 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 			if ( 'manage_stock' === $key ) {
 				return 'yes' === $v ? __( 'Yes', 'products-stock-manager-with-excel' ) : __( 'No', 'products-stock-manager-with-excel' );
 			}
-			if ( in_array( $key, array( 'regular_price', 'sale_price' ), true ) ) {
-				return wc_format_localized_price( $v );
+			if ( in_array( $key, array( 'regular_price', 'sale_price' ), true ) && is_numeric( $v ) ) {
+				return wc_format_localized_price( wc_format_decimal( $v, wc_get_price_decimals() ) );
 			}
 			return (string) $v;
 		}
@@ -578,7 +578,7 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 				/* translators: %s: size like 64 MB */
 				sprintf( __( 'up to %s', 'products-stock-manager-with-excel' ), size_format( wp_max_upload_size() ) )
 			) . '</span>';
-			echo '<input type="file" name="file" accept=".xlsx,.xls,.csv,.txt,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv" required><span class="wpf-sm-drop-file" data-file></span></label>';
+			echo '<input type="file" name="file" aria-label="' . esc_attr__( 'Spreadsheet file (.xlsx, .xls or .csv)', 'products-stock-manager-with-excel' ) . '" accept=".xlsx,.xls,.csv,.txt,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv" required><span class="wpf-sm-drop-file" data-file></span></label>';
 			echo '<div class="wpf-sm-actions"><button type="submit" class="wpf-sm-btn primary">' . esc_html__( 'Check the file', 'products-stock-manager-with-excel' ) . '</button></div>';
 			echo '</form></div></section>';
 			do_action( 'wpfactory_wc_sm_import_side', $this );
