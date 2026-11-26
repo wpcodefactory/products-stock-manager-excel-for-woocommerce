@@ -695,19 +695,24 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 			$weeks = self::weekly( wp_list_pluck( $rows, 'id' ) );
 			$items = array();
 			foreach ( $rows as $r ) {
-				$items[] = array(
-					'id'           => $r['id'],
-					'name'         => mb_substr( $r['name'], 0, 80 ),
-					'stock'        => $r['stock'],
-					'low_level'    => $r['level'],
-					'weekly_sales' => isset( $weeks[ $r['id'] ] ) ? $weeks[ $r['id'] ] : array_fill( 0, 12, 0 ),
+				$weekly   = isset( $weeks[ $r['id'] ] ) ? $weeks[ $r['id'] ] : array_fill( 0, 12, 0 );
+				$recent   = array_sum( array_slice( $weekly, -4 ) ) / 4;
+				$baseline = max( 0, (int) ceil( $recent / 7 * ( $lead + $cover ) - (float) $r['stock'] ) );
+				$items[]  = array(
+					'id'                     => $r['id'],
+					'name'                   => mb_substr( $r['name'], 0, 80 ),
+					'stock'                  => $r['stock'],
+					'low_level'              => $r['level'],
+					'weekly_sales'           => $weekly,
+					'average_last_4_weeks'   => round( $recent, 1 ),
+					'baseline_order'         => $baseline,
 				);
 			}
 			$res = self::ask(
 				'reorder',
 				(string) apply_filters( 'wpfactory_wc_sm_ai_reorder_model', 'claude-haiku-5-5' ),
 				60 * count( $items ) + 300,
-				'You help a small shop decide what to reorder. For each product you get the stock, its low stock level and units sold per week for the last 12 weeks (oldest first). The next delivery takes the given lead time in days and the shop wants stock for the given number of days after it arrives. Suggest a whole number to order (0 when no order is needed) and one short plain sentence why, mentioning the trend when there is one. Use only the numbers given. Do not invent prices, suppliers or dates.',
+				'You help a small shop decide what to reorder. For each product you get the stock, its low stock level, units sold per week for the last 12 weeks (oldest first), the average of the last 4 weeks and baseline_order: what the last 4 weeks of sales need for the lead time plus the cover days, minus the stock. Start from baseline_order. Change it only when the 12 weeks clearly show sales growing (order more) or falling (order less), and never suggest 0 for a product that sold in the last 4 weeks and has less stock than baseline_order needs. Give a whole number and a reason of at most 20 plain words that names the numbers you used. Use only the numbers given. Do not invent prices, suppliers or dates.',
 				wp_json_encode(
 					array(
 						'lead_time_days' => $lead,
@@ -753,7 +758,7 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 					'name'   => $by[ $id ]['name'],
 					'sku'    => $by[ $id ]['sku'],
 					'qty'    => max( 0, (int) $p['quantity'] ),
-					'reason' => sanitize_text_field( mb_substr( (string) $p['reason'], 0, 200 ) ),
+					'reason' => sanitize_text_field( wp_trim_words( (string) $p['reason'], 30, '...' ) ),
 				);
 			}
 			if ( ! $out ) {
