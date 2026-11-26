@@ -3,7 +3,7 @@
  * Stock Manager AI on WPFactory AI credits: match columns, suggest matches for skipped rows, suggest what to reorder.
  *
  * Nothing is sent until an administrator connects the site on WPFactory > AI Credits. Every AI answer is a suggestion
- * the merchant accepts; AI never writes to the store. Calls use one forced tool, so answers are JSON. Failed or empty
+ * the merchant accepts; AI never writes to the store. Calls offer one tool and ask for it, so answers are JSON. Failed or empty
  * answers are refunded. The filter `wpfactory_wc_sm_ai_response` answers instead of WPFactory AI (tests, own key).
  *
  * @package products-stock-manager-with-excel
@@ -135,16 +135,11 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 						'input_schema' => $schema,
 					),
 				),
-				'tool_choice' => array(
-					'type' => 'tool',
-					'name' => $tool,
-				),
+				// The 5.5 models refuse a forced tool ("tool_choice type tool is not supported for this model"), so
+				// the model chooses and the prompt asks for the tool. A text answer is refunded below.
+				'tool_choice' => array( 'type' => 'auto' ),
 			);
-			if ( false === strpos( $model, 'haiku' ) ) {
-				// Models that think first do not take a forced tool: let them choose, and ask for the tool in the prompt.
-				$body['tool_choice'] = array( 'type' => 'auto' );
-				$body['system']     .= ' Always answer by calling the ' . $tool . ' tool, and only that.';
-			}
+			$body['system'] .= ' Always answer by calling the ' . $tool . ' tool exactly once, with no other text.';
 			/**
 			 * Answer an AI call instead of WPFactory AI (tests, own key). Return null to use credits, an Anthropic
 			 * message array (with `content`), or WP_Error.
