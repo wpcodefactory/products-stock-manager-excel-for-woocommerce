@@ -135,9 +135,12 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 						'input_schema' => $schema,
 					),
 				),
-				// The 5.5 models refuse a forced tool ("tool_choice type tool is not supported for this model"), so
-				// the model chooses and the prompt asks for the tool. A text answer is refunded below.
-				'tool_choice' => array( 'type' => 'auto' ),
+				// A forced tool needs thinking off: the 5.5 models think by default and then refuse a forced tool.
+				'thinking'    => array( 'type' => 'disabled' ),
+				'tool_choice' => array(
+					'type' => 'tool',
+					'name' => $tool,
+				),
 			);
 			$body['system'] .= ' Always answer by calling the ' . $tool . ' tool exactly once, with no other text.';
 			/**
@@ -163,6 +166,12 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 					return new WP_Error( 'wpf_sm_ai_off', __( 'Turn on AI first: connect this site on WPFactory > AI Credits.', 'products-stock-manager-with-excel' ) );
 				}
 				$r = $ai->call( self::PRODUCT, $body, array( 'task' => $task ) );
+				if ( is_wp_error( $r ) && preg_match( '/thinking|tool_choice/i', $r->get_error_message() ) ) {
+					// The model does not take these settings: let it think and choose the tool itself.
+					unset( $body['thinking'] );
+					$body['tool_choice'] = array( 'type' => 'auto' );
+					$r                   = $ai->call( self::PRODUCT, $body, array( 'task' => $task ) );
+				}
 				if ( is_wp_error( $r ) ) {
 					if ( false !== stripos( $r->get_error_message(), 'X-WPFactory-Product' ) ) {
 						return new WP_Error( 'wpf_sm_ai_unknown', __( 'WPFactory AI does not run Stock Manager tasks yet. Nothing was charged. Please try again later.', 'products-stock-manager-with-excel' ) );
@@ -170,7 +179,8 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 					return $r; // Plain message from the library; nothing charged.
 				}
 			}
-			foreach ( (array) ( isset( $r['message']['content'] ) ? $r['message']['content'] : array() ) as $block ) {
+			$blocks = (array) ( isset( $r['message']['content'] ) ? $r['message']['content'] : array() );
+			foreach ( $blocks as $block ) {
 				if ( isset( $block['type'], $block['name'], $block['input'] ) && 'tool_use' === $block['type'] && $tool === $block['name'] ) {
 					return array(
 						'input'      => (array) $block['input'],
@@ -178,6 +188,32 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 					);
 				}
 			}
+			// A model that answered in text: use the JSON object in it when there is one.
+			foreach ( $blocks as $block ) {
+				if ( isset( $block['type'], $block['text'] ) && 'text' === $block['type'] && preg_match( '/\{.*\}/s', $block['text'], $m ) ) {
+					$json = json_decode( $m[0], true );
+					if ( is_array( $json ) && $json ) {
+						return array(
+							'input'      => $json,
+							'request_id' => (string) $r['request_id'],
+						);
+					}
+				}
+			}
+			set_transient(
+				'wpf_sm_ai_last_error',
+				array(
+					'task'   => $task,
+					'stop'   => isset( $r['message']['stop_reason'] ) ? $r['message']['stop_reason'] : '',
+					'blocks' => array_map(
+						function ( $b ) {
+							return isset( $b['type'] ) ? $b['type'] : '?';
+						},
+						$blocks
+					),
+				),
+				DAY_IN_SECONDS
+			);
 			self::refund( (string) $r['request_id'] );
 			$stop = isset( $r['message']['stop_reason'] ) ? (string) $r['message']['stop_reason'] : '';
 			if ( 'max_tokens' === $stop ) {
