@@ -3,8 +3,8 @@ Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: stock, inventory, excel, csv, woocommerce
 Requires at least: 6.2
 Requires PHP: 8.1
-Tested up to: 7.0
-Stable tag: 3.0.4
+Tested up to: 7.1
+Stable tag: 4.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,7 +83,9 @@ What Stock Manager sends, only when you click an AI button: for "Match columns w
 
 == Changelog ==
 
-= Unreleased =
+= 4.1.0 - 27/11/2026 =
+* Tested up to: 7.1.
+* WC tested up to: 11.3.
 * New - AI on WPFactory AI credits: match columns, suggest matches for rows that did not match, suggest what to reorder.
 * New - Preview of every change before it is saved, with the reason for every skipped row.
 * New - Backup before every update, Backups screen and one-click undo.
@@ -97,6 +99,8 @@ What Stock Manager sends, only when you click an AI button: for "Match columns w
 * Fix - Shop managers can use every screen.
 * Improved - Removed the email signup box, the deactivation survey, the GO PRO tab and every call to outside servers.
 * Dev - Text domain is now products-stock-manager-with-excel.
+* Dev - WPFactory Admin Menu - Library updated (to 1.1.4).
+* Dev - WPFactory Cross-Selling - Library updated (to 1.2.3).
 
 = 3.0.4 - 24/05/2026 =
 * Tested up to: 7.0.

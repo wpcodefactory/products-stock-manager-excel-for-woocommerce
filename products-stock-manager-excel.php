@@ -2,11 +2,11 @@
 /*
  * Plugin Name: Stock Manager with Excel for WooCommerce
  * Description: Update stock and prices from an Excel or CSV file. See every change before it is saved, undo any update, export products with variations, and see what is running low.
- * Version: 3.0.4
+ * Version: 4.1.0
  * Author: WPFactory
  * Author URI: https://wpfactory.com
  * WC requires at least: 7.0
- * WC tested up to: 10.7
+ * WC tested up to: 11.3
  * Requires at least: 6.2
  * Requires Plugins: woocommerce
  * Requires PHP: 8.1
@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '3.0.4' );
+defined( 'WPFACTORY_WC_SM_VERSION' ) || define( 'WPFACTORY_WC_SM_VERSION', '4.1.0' );
 
 defined( 'WPFACTORY_WC_SM_FILE' ) || define( 'WPFACTORY_WC_SM_FILE', __FILE__ );
 
