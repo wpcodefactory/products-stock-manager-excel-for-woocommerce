@@ -170,3 +170,14 @@ body.wpf-sm-screen #wpbody-content > .update-nag { display: none; }
 	.wpf-sm .wpf-sm-table th:first-child, .wpf-sm .wpf-sm-table td:first-child { padding-left: 16px; }
 	.wpf-sm .wpf-sm-head h1 { font-size: 20px; }
 }
+
+/* AI */
+.wpf-sm .wpf-sm-top { flex-wrap: wrap; }
+.wpf-sm .wpf-sm-pill a { display: inline-flex; align-items: center; height: 30px; padding: 0 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 13px; }
+.wpf-sm .wpf-sm-btn.wpf-sm-ai { gap: 6px; }
+.wpf-sm .wpf-sm-spark { color: var(--blue-ink); flex: none; }
+.wpf-sm .wpf-sm-sub-inline { font-weight: 400; color: var(--muted); font-size: 12px; margin-left: 4px; }
+.wpf-sm .wpf-sm-ai-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 0 0 14px; }
+.wpf-sm .wpf-sm-ai-form { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.wpf-sm .wpf-sm-inline-field { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.wpf-sm .wpf-sm-inline-field input { width: 80px; }

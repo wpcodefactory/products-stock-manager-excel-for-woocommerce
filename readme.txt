@@ -32,6 +32,7 @@ Update the stock and prices of your WooCommerce products from an Excel or CSV fi
 * Export to .xlsx with variations, filters (category, stock, type, name or SKU), low stock rows in amber and out of stock rows in red.
 * Low stock list using WooCommerce's low stock levels (store wide or per product), with units sold, days of stock left and a suggested reorder quantity. Works with WooCommerce's order storage (HPOS).
 * Shop managers can use every screen.
+* AI on WPFactory AI credits (optional, nothing is sent until you connect): match the columns of a supplier file, suggest matches for rows whose codes differ from your SKUs (remembered for the next files), and suggest what to reorder with a reason per product.
 
 = Pro =
 
@@ -74,9 +75,16 @@ Yes. Each variation is its own row, found by its ID or SKU. The variable product
 5. Export with variations and low stock colours.
 6. Low stock with sales and reorder quantities.
 
+== External services ==
+
+This plugin can use WPFactory AI (https://ai.wpfactory.com), a service by WPFactory, for its AI features, paid with WPFactory credits. Nothing is sent until a site administrator connects the site on the AI Credits screen with an email address and a 6-digit code sent to it. When connecting, the site address and that email address are sent. After that, the text of each AI request the plugin makes is sent when a user starts it; WPFactory AI passes it to Anthropic, its AI provider, to produce the answer. WPFactory AI keeps only numbers about each request (tokens, credits, time), never its content. Terms: https://wpfactory.com/terms-conditions/#wpfactory-ai Privacy: https://wpfactory.com/privacy-policy/#wpfactory-ai
+
+What Stock Manager sends, only when you click an AI button: for "Match columns with AI", the column names and the first 3 rows of your file; for "Suggest matches with AI", the codes and names of rows that did not match and up to 15 similar products from your store (ID, SKU, name) per row; for "Suggest reorder with AI", product names, stock, low stock levels and weekly units sold. No customer or order details are sent.
+
 == Changelog ==
 
 = Unreleased =
+* New: AI on WPFactory AI credits: match columns, suggest matches for rows that did not match, suggest what to reorder.
 * New: preview of every change before it is saved, with the reason for every skipped row.
 * New: backup before every update, Backups screen and one-click undo.
 * New: .xls and .csv files; columns found by name in any order.
