@@ -622,7 +622,7 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 				'info'  => __( 'Show only', 'products-stock-manager-with-excel' ),
 			);
 			for ( $i = 0; $i < $count; $i++ ) {
-				$head = isset( $header[ $i ] ) && '' !== $header[ $i ] && empty( $opts['legacy'] ) ? $header[ $i ] : '';
+				$head = isset( $header[ $i ] ) && '' !== $header[ $i ] ? $header[ $i ] : '';
 				$cur  = isset( $map[ $i ] ) ? $map[ $i ] : '';
 				echo '<tr><td><span class="wpf-sm-col">' . esc_html( WPF_SM_Fields::letter( $i ) ) . '</span> ' . esc_html( $head ) . '</td><td class="wpf-sm-mute">';
 				$vals = array();

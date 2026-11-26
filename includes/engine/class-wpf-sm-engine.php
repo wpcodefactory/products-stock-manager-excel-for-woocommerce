@@ -75,6 +75,12 @@ if ( ! class_exists( 'WPF_SM_Engine' ) ) :
 				$map         = apply_filters( 'wpfactory_wc_sm_legacy_map', WPF_SM_Fields::legacy_map() );
 				$legacy      = true;
 				$header_line = 1;
+				// Only the columns the file has.
+				$width = count( (array) $header );
+				foreach ( array_slice( $rows, 0, 20 ) as $cells ) {
+					$width = max( $width, count( (array) $cells ) );
+				}
+				$map = array_slice( $map, 0, max( 1, $width ), true );
 			}
 			$options = wp_parse_args( isset( $extra['options'] ) ? $extra['options'] : array(), self::site_options() );
 			$options['header_line'] = $header_line;

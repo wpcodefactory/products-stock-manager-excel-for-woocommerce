@@ -68,12 +68,12 @@ Yes. Each variation is its own row, found by its ID or SKU. The variable product
 
 == Screenshots ==
 
-1. Upload a file and see the columns it has.
-2. Preview: what changes, what needs a check and what is skipped.
+1. The columns of a supplier file, matched by their names (here with AI, for German headers).
+2. Preview: what changes, what needs a check and what is skipped, before anything is saved.
 3. Results with the report and one-click undo.
 4. Backups of every update.
-5. Export with variations and low stock colours.
-6. Low stock with sales and reorder quantities.
+5. Export with variations, filters and low stock colours.
+6. Low stock with reorder suggestions.
 
 == External services ==
 
@@ -84,19 +84,19 @@ What Stock Manager sends, only when you click an AI button: for "Match columns w
 == Changelog ==
 
 = Unreleased =
-* New: AI on WPFactory AI credits: match columns, suggest matches for rows that did not match, suggest what to reorder.
-* New: preview of every change before it is saved, with the reason for every skipped row.
-* New: backup before every update, Backups screen and one-click undo.
-* New: .xls and .csv files; columns found by name in any order.
-* New: variations, external products and GTIN in the free plugin.
-* New: add received quantities instead of replacing the stock.
-* New: export with variations, filters and low stock colours, built in batches.
-* New: low stock list with sales, days left and reorder quantities; works with HPOS.
-* Fix: stock status, sale prices, variable product prices and shop filters now follow every update (saved through WooCommerce).
-* Fix: a row without an ID or SKU no longer changes the product of the row above.
-* Fix: shop managers can use every screen.
-* Removed: the email signup box, the deactivation survey, the GO PRO tab and every call to outside servers.
-* Text domain is now products-stock-manager-with-excel.
+* New - AI on WPFactory AI credits: match columns, suggest matches for rows that did not match, suggest what to reorder.
+* New - Preview of every change before it is saved, with the reason for every skipped row.
+* New - Backup before every update, Backups screen and one-click undo.
+* New - Read .xls and .csv files; columns found by name in any order.
+* New - Variations, external products and GTIN in the free plugin.
+* New - Add received quantities instead of replacing the stock.
+* New - Export with variations, filters and low stock colours, built in batches.
+* New - Low stock list with sales, days left and reorder quantities; works with HPOS.
+* Fix - Stock status, sale prices, variable product prices and shop filters now follow every update (saved through WooCommerce).
+* Fix - A row without an ID or SKU no longer changes the product of the row above.
+* Fix - Shop managers can use every screen.
+* Improved - Removed the email signup box, the deactivation survey, the GO PRO tab and every call to outside servers.
+* Dev - Text domain is now products-stock-manager-with-excel.
 
 = 3.0.4 - 24/05/2026 =
 * Tested up to: 7.0.

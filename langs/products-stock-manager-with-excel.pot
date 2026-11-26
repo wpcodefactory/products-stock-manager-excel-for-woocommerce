@@ -1,0 +1,1269 @@
+# Copyright (C) 2026 WPFactory
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Products Stock Manager with Excel for WooCommerce\n"
+"Report-Msgid-Bugs-To: https://wpfactory.com/\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-26T14:17:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: products-stock-manager-with-excel\n"
+
+#: includes/class-wpfactory-wc-sm.php:152
+#: includes/engine/class-wpf-sm-admin.php:185
+#: includes/engine/class-wpf-sm-admin.php:1125
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wpfactory-wc-sm.php:192
+#: includes/class-wpfactory-wc-sm.php:193
+#: includes/engine/class-wpf-sm-admin.php:211
+#: includes/engine/class-wpf-sm-ai.php:53
+msgid "Stock Manager"
+msgstr ""
+
+#: includes/class-wpfactory-wc-sm.php:224
+msgid "Stock Manager Pro is active and includes everything in this plugin, so this plugin is not used. You can deactivate it."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:159
+msgid "Something went wrong. Reload the page to continue where it stopped."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:160
+msgid "rows"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:161
+msgid "Working..."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:162
+msgid "Your file is ready. The download starts now."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:181
+#: includes/engine/class-wpf-sm-admin.php:953
+msgid "Update stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:182
+msgid "Backups"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:183
+msgid "Export"
+msgstr ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:184
+#: includes/engine/class-wpf-sm-admin.php:1077
+msgid "Low stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:205
+msgid "You cannot use this screen."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:211
+msgid "Pro"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:211
+msgid "for WooCommerce"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:214
+msgid "Stock Manager sections"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:311
+#: includes/engine/class-wpf-sm-admin.php:1315
+#: includes/engine/class-wpf-sm-admin.php:1474
+#: includes/engine/class-wpf-sm-admin.php:1490
+#: includes/engine/class-wpf-sm-admin.php:1587
+#: includes/engine/class-wpf-sm-ai.php:231
+msgid "You cannot do this."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:341
+msgid "Sale starts"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:342
+msgid "Sale ends"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:367
+msgid "(empty)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:374
+#: includes/engine/class-wpf-sm-export.php:252
+#: includes/engine/class-wpf-sm-fields.php:318
+msgid "Yes"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:374
+#: includes/engine/class-wpf-sm-export.php:252
+#: includes/engine/class-wpf-sm-fields.php:321
+msgid "No"
+msgstr ""
+
+#. translators: 1: field, 2: old value, 3: new value, 4: number added
+#: includes/engine/class-wpf-sm-admin.php:393
+msgid "%1$s: %2$s to %3$s (%4$s)"
+msgstr ""
+
+#. translators: 1: field, 2: old value, 3: new value
+#: includes/engine/class-wpf-sm-admin.php:396
+msgid "%1$s: %2$s to %3$s"
+msgstr ""
+
+#. translators: %s: SKU
+#: includes/engine/class-wpf-sm-admin.php:415
+msgid "SKU \"%s\" belongs to another product; the ID was used."
+msgstr ""
+
+#. translators: %s: ID
+#: includes/engine/class-wpf-sm-admin.php:418
+msgid "No product with ID %s, so the SKU or GTIN was used."
+msgstr ""
+
+#. translators: %s: ID
+#: includes/engine/class-wpf-sm-admin.php:421
+msgid "ID %s is not a product."
+msgstr ""
+
+#. translators: %s: ID
+#: includes/engine/class-wpf-sm-admin.php:424
+msgid "No product with ID %s."
+msgstr ""
+
+#. translators: %s: SKU
+#: includes/engine/class-wpf-sm-admin.php:427
+msgid "No product with SKU \"%s\"."
+msgstr ""
+
+#. translators: %s: GTIN
+#: includes/engine/class-wpf-sm-admin.php:430
+msgid "No product with GTIN \"%s\"."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:432
+msgid "No ID, SKU or GTIN in this row."
+msgstr ""
+
+#. translators: 1: field, 2: cell
+#: includes/engine/class-wpf-sm-admin.php:435
+msgid "%1$s: \"%2$s\" is not a number."
+msgstr ""
+
+#. translators: 1: field, 2: cell
+#: includes/engine/class-wpf-sm-admin.php:438
+msgid "%1$s: %2$s is below 0."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:440
+msgid "A regular price of 0 is not saved (Settings can change this)."
+msgstr ""
+
+#. translators: 1: field, 2: cell
+#: includes/engine/class-wpf-sm-admin.php:443
+msgid "%1$s: \"%2$s\" is not a stock status. Use In stock, Out of stock or On backorder."
+msgstr ""
+
+#. translators: 1: field, 2: cell
+#: includes/engine/class-wpf-sm-admin.php:446
+msgid "%1$s: \"%2$s\" is not Yes or No."
+msgstr ""
+
+#. translators: 1: field, 2: cell
+#: includes/engine/class-wpf-sm-admin.php:449
+msgid "%1$s: \"%2$s\" is not a date."
+msgstr ""
+
+#. translators: %s: row numbers
+#: includes/engine/class-wpf-sm-admin.php:452
+msgid "Same product in rows %s: the last row is used."
+msgstr ""
+
+#. translators: %s: row numbers
+#: includes/engine/class-wpf-sm-admin.php:455
+msgid "Same product in rows %s: the stock numbers are added up."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:457
+msgid "Not in the file: stock set to 0."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:459
+msgid "Not in the file: marked out of stock."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:461
+msgid "Grouped products have no stock or price of their own."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:464
+msgid "variation"
+msgstr ""
+
+#. translators: 1: field, 2: product type
+#: includes/engine/class-wpf-sm-admin.php:466
+msgid "%1$s cannot be set on this kind of product (%2$s)."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:468
+msgid "Stock tracking will be turned on for this product."
+msgstr ""
+
+#. translators: %s: stock number
+#: includes/engine/class-wpf-sm-admin.php:471
+msgid "This product does not track stock, so the stock number %s is not saved. Turn on \"Track stock\" for it, or choose \"Turn tracking on\" in Settings."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:473
+msgid "This product tracks stock, so its stock status follows the stock number. Change the stock instead."
+msgstr ""
+
+#. translators: 1: stock now, 2: number added
+#: includes/engine/class-wpf-sm-admin.php:476
+msgid "Stock goes below 0 (%1$s and %2$s)."
+msgstr ""
+
+#. translators: 1: sale price, 2: regular price
+#: includes/engine/class-wpf-sm-admin.php:479
+msgid "Sale price %1$s is not below the regular price %2$s, so WooCommerce removes the sale price."
+msgstr ""
+
+#. translators: 1: field, 2: percent
+#: includes/engine/class-wpf-sm-admin.php:482
+msgid "%1$s changes by %2$s%%."
+msgstr ""
+
+#. translators: 1: old stock, 2: new stock
+#: includes/engine/class-wpf-sm-admin.php:485
+msgid "Stock jumps from %1$s to %2$s."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:499
+#: includes/engine/class-wpf-sm-admin.php:731
+#: includes/engine/class-wpf-sm-admin.php:1358
+msgid "Ready"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:500
+#: includes/engine/class-wpf-sm-admin.php:1359
+msgid "Check"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:501
+#: includes/engine/class-wpf-sm-admin.php:733
+#: includes/engine/class-wpf-sm-admin.php:907
+#: includes/engine/class-wpf-sm-admin.php:1360
+msgid "Skipped"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:502
+#: includes/engine/class-wpf-sm-admin.php:734
+#: includes/engine/class-wpf-sm-admin.php:909
+#: includes/engine/class-wpf-sm-admin.php:1361
+msgid "No change"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:503
+#: includes/engine/class-wpf-sm-admin.php:906
+#: includes/engine/class-wpf-sm-admin.php:1362
+msgid "Updated"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:504
+#: includes/engine/class-wpf-sm-admin.php:908
+#: includes/engine/class-wpf-sm-admin.php:1363
+msgid "Failed"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:519
+msgid "Restore"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:521
+msgid "Scheduled"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:523
+msgid "From a link"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:525
+msgid "Uploaded file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:566
+msgid "Update stock and prices from a spreadsheet"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:566
+msgid "You see every change before it is saved, and you can undo it afterwards."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:570
+msgid "Get your products as a spreadsheet."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:570
+msgid "Download my products"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:571
+msgid "Change stock or prices"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:571
+msgid "in Excel, Google Sheets, Numbers or LibreOffice. Any column order works; columns you do not need can stay."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:572
+msgid "Upload the file here."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:572
+msgid "Nothing changes until you confirm the preview."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:577
+msgid "Choose a file or drop it here"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:577
+msgid ".xlsx, .xls or .csv"
+msgstr ""
+
+#. translators: %s: size like 64 MB
+#: includes/engine/class-wpf-sm-admin.php:579
+msgid "up to %s"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:581
+msgid "Spreadsheet file (.xlsx, .xls or .csv)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:582
+#: includes/engine/class-wpf-sm-admin.php:673
+msgid "Check the file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:588
+msgid "Recent updates"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:588
+msgid "All updates and backups"
+msgstr ""
+
+#. translators: %s: number of rows
+#: includes/engine/class-wpf-sm-admin.php:601
+msgid "Check the columns"
+msgstr ""
+
+#. translators: %s: number of rows
+#: includes/engine/class-wpf-sm-admin.php:601
+msgid "%s row"
+msgid_plural "%s rows"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-admin.php:607
+msgid "We did not find column names we know, so the columns are read in the fixed order of earlier versions: A ID, B SKU, C regular price, D sale price, E stock, F stock status. Row 1 is skipped as a header row. Change any column below."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:610
+#: includes/engine/class-wpf-sm-admin.php:1227
+msgid "Choose at least one column that finds products (ID, SKU or GTIN) and one column to update."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:615
+msgid "Columns we found"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:617
+msgid "Column"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:617
+msgid "First rows"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:617
+msgid "Use it for"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:620
+msgid "Find the product by"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:621
+msgid "Update"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:622
+msgid "Show only"
+msgstr ""
+
+#. translators: %s: column letter
+#: includes/engine/class-wpf-sm-admin.php:635
+msgid "Use column %s for"
+msgstr ""
+
+#. translators: %s: column letter
+#: includes/engine/class-wpf-sm-admin.php:636
+msgid "Do not use"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:656
+msgid "Stock numbers in the file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:659
+#: includes/engine/class-wpf-sm-admin.php:1129
+msgid "Replace the stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:660
+msgid "Add to the stock (goods received)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:665
+#: includes/engine/class-wpf-sm-admin.php:1130
+msgid "Same product in several rows"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:668
+#: includes/engine/class-wpf-sm-admin.php:1130
+msgid "Use the last row"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:669
+#: includes/engine/class-wpf-sm-admin.php:1130
+msgid "Add the stock numbers up"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:674
+#: includes/engine/class-wpf-sm-admin.php:756
+msgid "Cancel"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:702
+msgid "Restoring the backup"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:702
+msgid "Updating your products"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:702
+msgid "Checking the file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:709
+msgid "Keep this page open until it finishes."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:713
+msgid "Continue"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:725
+msgid "Restore preview"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:725
+msgid "Preview: nothing is saved yet"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:732
+msgid "To check"
+msgstr ""
+
+#. translators: %s: number of products
+#: includes/engine/class-wpf-sm-admin.php:748
+msgid "Update %s product"
+msgid_plural "Update %s products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-admin.php:750
+msgid "Nothing to update: no row changes a product."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:752
+msgid "Download the preview"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:754
+msgid "Change columns"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:767
+msgid "Columns read in the fixed order of earlier versions (A ID, B SKU, C regular price, D sale price, E stock, F stock status); row 1 skipped."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:770
+msgid "Stock numbers in the file are added to the current stock."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:776
+msgid "No row matched a product, so products that are not in the file were left as they are."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:777
+msgid "More than half of the rows did not match a product, so products that are not in the file were left as they are."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:813
+msgid "Ready to update"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:814
+msgid "Please check these rows"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:815
+msgid "Skipped rows"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:816
+msgid "Rows with no change"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:817
+msgid "Updated products"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:818
+msgid "Products that failed"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:820
+msgid "All rows"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:834
+msgid "No rows here."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:837
+#: includes/engine/class-wpf-sm-admin.php:1356
+#: includes/engine/class-wpf-sm-ai.php:466
+msgid "Row"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:837
+#: includes/engine/class-wpf-sm-admin.php:1096
+#: includes/engine/class-wpf-sm-admin.php:1356
+#: includes/engine/class-wpf-sm-ai.php:690
+msgid "Product"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:837
+#: includes/engine/class-wpf-sm-admin.php:1356
+msgid "What changes"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:837
+msgid "Status"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:883
+msgid "Backup restored"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:883
+msgid "Update finished"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:885
+msgid "This update failed."
+msgstr ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:888
+msgid "%s product updated."
+msgid_plural "%s products updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:891
+msgid "%s row skipped."
+msgid_plural "%s rows skipped."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:895
+msgid "%s product failed."
+msgid_plural "%s products failed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-admin.php:900
+msgid "This update was undone."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:900
+msgid "See the restore"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:916
+msgid "Update another file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:917
+msgid "Download the report"
+msgstr ""
+
+#. translators: %s: number of products
+#: includes/engine/class-wpf-sm-admin.php:935
+msgid "Put %s product back the way it was before this update?"
+msgid_plural "Put %s products back the way they were before this update?"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of products
+#: includes/engine/class-wpf-sm-admin.php:935
+msgid "Undo this restore"
+msgstr ""
+
+#. translators: %s: number of products
+#: includes/engine/class-wpf-sm-admin.php:935
+msgid "Undo this update"
+msgstr ""
+
+#. translators: %s: number of days
+#: includes/engine/class-wpf-sm-admin.php:948
+msgid "Updates and backups"
+msgstr ""
+
+#. translators: %s: number of days
+#: includes/engine/class-wpf-sm-admin.php:948
+msgid "Every update saves the old values first. Backups are kept for %s day (Settings)."
+msgid_plural "Every update saves the old values first. Backups are kept for %s days (Settings)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-admin.php:953
+msgid "No updates yet. Your first update and its backup will show here."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:974
+msgid "When"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:974
+msgid "File"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:974
+#: includes/engine/class-wpf-sm-admin.php:1356
+msgid "Result"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:974
+msgid "Backup"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:974
+msgid "Actions"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:977
+msgid "Schedule"
+msgstr ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:984
+msgid "%s updated"
+msgid_plural "%s updated"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:987
+msgid "%s skipped"
+msgid_plural "%s skipped"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-admin.php:992
+msgid "Undone"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:994
+msgid "None"
+msgstr ""
+
+#. translators: %s: date
+#: includes/engine/class-wpf-sm-admin.php:997
+msgid "Kept until %s"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:999
+msgid "Report"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1014
+msgid "Download your products as a spreadsheet"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1014
+msgid "Variations come as their own rows under their product. Low stock rows are amber and out of stock rows are red. Change stock or prices, then upload the file on Update stock."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1018
+msgid "Which products"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1019
+msgid "Category"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1024
+msgid "All categories"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1030
+#: includes/engine/class-wpf-sm-admin.php:1096
+#: includes/engine/class-wpf-sm-admin.php:1558
+#: includes/engine/class-wpf-sm-export.php:31
+#: includes/engine/class-wpf-sm-fields.php:57
+msgid "Stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1030
+msgid "Any stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1030
+msgid "Low or out of stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1034
+#: includes/engine/class-wpf-sm-export.php:34
+msgid "Type"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1034
+msgid "All types"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1038
+msgid "Name or SKU contains"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1039
+msgid "Columns"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1043
+#: includes/engine/class-wpf-sm-admin.php:1086
+msgid "Download .xlsx"
+msgstr ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-admin.php:1077
+msgid "Products that track stock and are at or under their low stock level (%s for products without their own level). Sales come from WooCommerce orders."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1079
+#: includes/engine/class-wpf-sm-admin.php:1085
+msgid "Show"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1080
+msgid "Low and out of stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1080
+#: includes/engine/class-wpf-sm-admin.php:1099
+msgid "Out of stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1080
+msgid "Everything that tracks stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1083
+msgid "Sales of the last (days)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1084
+msgid "Reorder enough for (days)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1091
+msgid "Nothing is low on stock. Products show here when their stock reaches their low stock level."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1096
+#: includes/engine/class-wpf-sm-admin.php:1558
+#: includes/engine/class-wpf-sm-export.php:36
+#: includes/engine/class-wpf-sm-fields.php:81
+msgid "Low stock level"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1096
+#: includes/engine/class-wpf-sm-admin.php:1558
+msgid "Sold"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1096
+#: includes/engine/class-wpf-sm-admin.php:1558
+msgid "Days left"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1096
+#: includes/engine/class-wpf-sm-admin.php:1558
+msgid "Reorder"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1112
+msgid "Days left = stock divided by daily sales. Reorder = what the sales of the chosen period need for the days you aim for, minus the stock."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1125
+msgid "Defaults for every update. You can change the stock choices for one file on its column step."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1129
+msgid "Stock numbers in a file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1129
+msgid "Add to the stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1131
+msgid "A stock number for a product that does not track stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1131
+msgid "Skip the number"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1131
+msgid "Turn tracking on"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1131
+msgid "WooCommerce ignores stock numbers on products that do not track stock."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1132
+msgid "A regular price of 0"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1132
+msgid "Keep the current price"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1132
+msgid "Save 0"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1133
+msgid "Ask me to check prices that change by more than (percent)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1134
+msgid "Keep backups for (days)"
+msgstr ""
+
+#. translators: %s: WooCommerce's low stock number
+#: includes/engine/class-wpf-sm-admin.php:1137
+msgid "Low stock level for products without their own"
+msgstr ""
+
+#. translators: %s: WooCommerce's low stock number
+#: includes/engine/class-wpf-sm-admin.php:1137
+msgid "Leave empty to use WooCommerce's setting (%s). Each product can have its own level in its Inventory tab or in the \"Low stock level\" column."
+msgstr ""
+
+#. translators: %s: WooCommerce's low stock number
+#: includes/engine/class-wpf-sm-admin.php:1138
+msgid "Low stock: sales of the last (days)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1139
+msgid "Low stock: reorder enough for (days)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1141
+msgid "Save"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1185
+msgid "Choose a file first."
+msgstr ""
+
+#. translators: %s: size
+#: includes/engine/class-wpf-sm-admin.php:1189
+msgid "The file is larger than this site accepts (%s). Save it as .csv, or split it."
+msgstr ""
+
+#. translators: %s: size
+#: includes/engine/class-wpf-sm-admin.php:1189
+msgid "The file did not arrive. Try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1196
+msgid "Choose an .xlsx, .xls or .csv file."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1209
+msgid "This update no longer exists. Upload the file again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1265
+#: includes/engine/class-wpf-sm-ai.php:545
+#: includes/engine/class-wpf-sm-ai.php:619
+msgid "This preview is no longer open."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1281
+msgid "Cancelled. Nothing was changed."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1347
+msgid "This update no longer exists."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1356
+#: includes/engine/class-wpf-sm-fields.php:42
+msgid "Product ID"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1356
+#: includes/engine/class-wpf-sm-admin.php:1558
+#: includes/engine/class-wpf-sm-export.php:28
+#: includes/engine/class-wpf-sm-fields.php:47
+msgid "SKU"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1356
+msgid "Notes"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1427
+msgid "Settings saved."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1511
+#: includes/engine/class-wpf-sm-export.php:129
+#: includes/engine/class-wpf-sm-xlsx.php:194
+msgid "The export expired. Start it again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1558
+#: includes/engine/class-wpf-sm-export.php:27
+msgid "ID"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-admin.php:1558
+#: includes/engine/class-wpf-sm-export.php:33
+msgid "Name"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:89
+msgid "Turn on AI"
+msgstr ""
+
+#. translators: %s: number of credits
+#: includes/engine/class-wpf-sm-ai.php:101
+msgid "about %s credit"
+msgid_plural "about %s credits"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-ai.php:171
+msgid "Turn on AI first: connect this site on WPFactory > AI Credits."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:177
+msgid "WPFactory AI does not run Stock Manager tasks yet. Nothing was charged. Please try again later."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:208
+msgid "The AI needed more room than this request allows, so nothing was charged. Try again with fewer rows or products."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:210
+msgid "The AI answer was empty, so nothing was charged. Try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:267
+msgid "Match columns with AI"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:279
+msgid "This update is no longer open."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:357
+msgid "AI found no other column it could match. Nothing was charged."
+msgstr ""
+
+#. translators: %s: list of columns and fields
+#: includes/engine/class-wpf-sm-ai.php:363
+msgid "AI matched: %s. Check them before you go on."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:466
+msgid "Suggested matches"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:466
+msgid "Use"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:466
+msgid "In the file"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:466
+msgid "Your product"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:466
+#: includes/engine/class-wpf-sm-ai.php:690
+msgid "Why"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:472
+msgid "Use this match"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:475
+msgid "Use the ticked matches and check again"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:475
+msgid "The codes are remembered for the next files."
+msgstr ""
+
+#. translators: %s: number of rows
+#: includes/engine/class-wpf-sm-ai.php:482
+msgid "%s row did not match a product by its code."
+msgid_plural "%s rows did not match a product by their code."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of rows
+#: includes/engine/class-wpf-sm-ai.php:483
+msgid "Suggest matches with AI"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:556
+msgid "No product in your store looks close to these rows, so AI was not asked. Nothing was charged."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:604
+msgid "AI found no sure match. Nothing was charged."
+msgstr ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-ai.php:608
+msgid "AI suggests %s match. Tick the ones that are right."
+msgid_plural "AI suggests %s matches. Tick the ones that are right."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number
+#: includes/engine/class-wpf-sm-ai.php:635
+msgid "%s match saved. The file is being checked again."
+msgid_plural "%s matches saved. The file is being checked again."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/engine/class-wpf-sm-ai.php:685
+msgid "What to reorder"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:686
+msgid "Days until a new order arrives"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:687
+msgid "Suggest reorder with AI"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:690
+msgid "Order"
+msgstr ""
+
+#. translators: %s: date and time
+#: includes/engine/class-wpf-sm-ai.php:695
+msgid "Suggested %s from your sales and stock. Check them before you order."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:697
+msgid "AI looks at 12 weeks of sales, the trend and your stock, and suggests how many to order with a reason for each product."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:721
+msgid "Nothing to reorder."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:794
+msgid "The AI answer could not be used, so nothing was charged. Try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-ai.php:811
+msgid "Reorder suggestions are ready below."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-engine.php:100
+msgid "The update could not be saved in the database."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-engine.php:1010
+msgid "The product no longer exists."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-engine.php:1109
+msgid "The backup of this update is no longer kept."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-engine.php:1125
+msgid "This update did not change any product, so there is nothing to restore."
+msgstr ""
+
+#. translators: %s: name of the file of the update being undone
+#: includes/engine/class-wpf-sm-engine.php:1129
+msgid "Restore: %s"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:29
+#: includes/engine/class-wpf-sm-fields.php:69
+msgid "Regular price"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:30
+#: includes/engine/class-wpf-sm-fields.php:75
+msgid "Sale price"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:32
+#: includes/engine/class-wpf-sm-fields.php:63
+msgid "Stock status"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:35
+msgid "Parent"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:37
+#: includes/engine/class-wpf-sm-fields.php:87
+msgid "Track stock"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:38
+#: includes/engine/class-wpf-sm-fields.php:52
+msgid "GTIN, UPC, EAN or ISBN"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:39
+msgid "Categories"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-export.php:243
+msgid "Variation"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-fields.php:93
+msgid "Name (not changed)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-fields.php:98
+msgid "Type (not changed)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-fields.php:103
+msgid "Parent (not changed)"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:74
+msgid "The file is empty."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:76
+msgid "This is a web page, not a spreadsheet. If it is a Google Sheets link, share the sheet with \"Anyone with the link\" or publish it, then try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:78
+msgid "This file is not a spreadsheet we can read. Save it as .xlsx, .xls or .csv and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:98
+msgid "The file has no rows."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:112
+msgid "The .xlsx file could not be opened. It may be damaged or cut off. Save it again in Excel and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:119
+msgid "The .xlsx file has no worksheet we can read. Save it again in Excel and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:189
+msgid "The .xlsx file could not be read. It may be damaged or cut off. Save it again in Excel and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:263
+msgid "This server cannot read this kind of file. Save it as .csv and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:282
+msgid "The file could not be read. It may be damaged, protected by a password or in a format we do not read. Save it as .xlsx or .csv and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:295
+msgid "The file could not be opened."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-reader.php:301
+msgid "This .csv file is saved as UTF-16. Save it as \"CSV UTF-8\" and try again."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-runs.php:35
+msgid "Stock updates"
+msgstr ""
+
+#: includes/engine/class-wpf-sm-xlsx.php:38
+msgid "The uploads folder is not writable."
+msgstr ""
+
+#: includes/engine/class-wpf-sm-xlsx.php:218
+msgid "The .xlsx file could not be created."
+msgstr ""
+
+#. Plugin Name of the plugin
+#: products-stock-manager-excel.php
+msgid "Products Stock Manager with Excel for WooCommerce Inventory"
+msgstr ""
+
+#. Description of the plugin
+#: products-stock-manager-excel.php
+msgid "Update stock and prices from an Excel or CSV file. See every change before it is saved, undo any update, export products with variations, and see what is running low."
+msgstr ""
+
+#. Author of the plugin
+#: products-stock-manager-excel.php
+msgid "WPFactory"
+msgstr ""
+
