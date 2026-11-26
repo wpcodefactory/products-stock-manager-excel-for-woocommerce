@@ -140,6 +140,11 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 					'name' => $tool,
 				),
 			);
+			if ( false === strpos( $model, 'haiku' ) ) {
+				// Models that think first do not take a forced tool: let them choose, and ask for the tool in the prompt.
+				$body['tool_choice'] = array( 'type' => 'auto' );
+				$body['system']     .= ' Always answer by calling the ' . $tool . ' tool, and only that.';
+			}
 			/**
 			 * Answer an AI call instead of WPFactory AI (tests, own key). Return null to use credits, an Anthropic
 			 * message array (with `content`), or WP_Error.
@@ -705,7 +710,7 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 			}
 			$res = self::ask(
 				'reorder',
-				'claude-sonnet-5-5',
+				(string) apply_filters( 'wpfactory_wc_sm_ai_reorder_model', 'claude-haiku-5-5' ),
 				60 * count( $items ) + 300,
 				'You help a small shop decide what to reorder. For each product you get the stock, its low stock level and units sold per week for the last 12 weeks (oldest first). The next delivery takes the given lead time in days and the shop wants stock for the given number of days after it arrives. Suggest a whole number to order (0 when no order is needed) and one short plain sentence why, mentioning the trend when there is one. Use only the numbers given. Do not invent prices, suppliers or dates.',
 				wp_json_encode(

@@ -644,7 +644,7 @@ if ( ! class_exists( 'WPF_SM_Admin' ) ) :
 					}
 					echo '</optgroup>';
 				}
-				if ( 0 === strpos( $cur, 'meta:' ) ) {
+				if ( 0 === strpos( $cur, 'meta:' ) && ! isset( WPF_SM_Fields::all()[ $cur ] ) ) {
 					printf( '<option value="%s" selected>%s</option>', esc_attr( $cur ), esc_html( self::label( $cur ) ) );
 				}
 				echo '</select></td></tr>';
