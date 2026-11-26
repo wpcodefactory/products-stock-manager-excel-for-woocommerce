@@ -7,11 +7,23 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'WPFactory\\WPFactory_Admin_Menu\\Plugin_Icon' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/class-plugin-icon.php',
     'WPFactory\\WPFactory_Admin_Menu\\Singleton' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/trait-singleton.php',
     'WPFactory\\WPFactory_Admin_Menu\\WC_Settings_Menu_Item_Swapper' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/class-wc-settings-menu-item-swapper.php',
     'WPFactory\\WPFactory_Admin_Menu\\WPFactory_Admin_Menu' => $vendorDir . '/wpfactory/wpfactory-admin-menu/src/php/class-wpfactory-admin-menu.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Catalog' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-catalog.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Installer' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-installer.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Page' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-page.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Plugin' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-plugin.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Rules_Engine' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-rules-engine.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Signals' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-signals.php',
+    'WPFactory\\WPFactory_Cross_Selling\\My_Plugins\\Site_State' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/my-plugins/class-site-state.php',
     'WPFactory\\WPFactory_Cross_Selling\\Product_Categories' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/class-product-categories.php',
     'WPFactory\\WPFactory_Cross_Selling\\Products' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/class-products.php',
+    'WPFactory\\WPFactory_Cross_Selling\\Recommendation_Box_Tags' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/class-recommendation-box-tags.php',
+    'WPFactory\\WPFactory_Cross_Selling\\Recommendations_Box' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/class-recommendations-box.php',
+    'WPFactory\\WPFactory_Cross_Selling\\Recommendations_Page' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/class-recommendations-page.php',
     'WPFactory\\WPFactory_Cross_Selling\\Singleton' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/trait-singleton.php',
     'WPFactory\\WPFactory_Cross_Selling\\WPFactory_Cross_Selling' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/class-wpfactory-cross-selling.php',
+    'WPFactory\\WPFactory_Cross_Selling\\WPFactory_Cross_Selling_Injector' => $vendorDir . '/wpfactory/wpfactory-cross-selling/src/php/trait-wpfactory-cross-selling-injector.php',
 );
