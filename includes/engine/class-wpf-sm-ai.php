@@ -179,7 +179,11 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 				}
 			}
 			self::refund( (string) $r['request_id'] );
-			return new WP_Error( 'wpf_sm_ai_empty', __( 'The AI answer was empty, so nothing was charged. Try again.', 'products-stock-manager-with-excel' ) );
+			$stop = isset( $r['message']['stop_reason'] ) ? (string) $r['message']['stop_reason'] : '';
+			if ( 'max_tokens' === $stop ) {
+				return new WP_Error( 'wpf_sm_ai_long', __( 'The AI needed more room than this request allows, so nothing was charged. Try again with fewer rows or products.', 'products-stock-manager-with-excel' ), array( 'stop_reason' => $stop ) );
+			}
+			return new WP_Error( 'wpf_sm_ai_empty', __( 'The AI answer was empty, so nothing was charged. Try again.', 'products-stock-manager-with-excel' ), array( 'stop_reason' => $stop ) );
 		}
 
 		/**
@@ -270,7 +274,7 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 			$res  = self::ask(
 				'map-columns',
 				'claude-haiku-5-5',
-				500,
+				1500,
 				'You match the columns of a supplier or stock spreadsheet to WooCommerce product fields. Use only the field keys given. A column that finds the product (ID, SKU, GTIN/EAN/barcode) is a key field. Use "ignore" when unsure or when no field fits. Never guess wildly: a wrong match changes prices or stock.',
 				wp_json_encode(
 					array(
@@ -530,7 +534,7 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 			$res = self::ask(
 				'match-rows',
 				'claude-haiku-5-5',
-				60 * count( $ask ) + 200,
+				1500 + 100 * count( $ask ),
 				'You match rows of a supplier file to products of a WooCommerce store. For each row, pick the one candidate that is the same product (same item, same size or colour), judging by code and name. Supplier codes often differ in case, dashes or prefixes. If none is clearly the same product, answer 0. Never pick a product only because it is similar.',
 				wp_json_encode( array( 'rows' => $ask ) ),
 				'save_matches',
@@ -711,7 +715,7 @@ if ( ! class_exists( 'WPF_SM_AI' ) ) :
 			$res = self::ask(
 				'reorder',
 				(string) apply_filters( 'wpfactory_wc_sm_ai_reorder_model', 'claude-haiku-5-5' ),
-				60 * count( $items ) + 300,
+				1500 + 120 * count( $items ),
 				'You help a small shop decide what to reorder. For each product you get the stock, its low stock level, units sold per week for the last 12 weeks (oldest first), the average of the last 4 weeks and baseline_order: what the last 4 weeks of sales need for the lead time plus the cover days, minus the stock. Start from baseline_order. Change it only when the 12 weeks clearly show sales growing (order more) or falling (order less), and never suggest 0 for a product that sold in the last 4 weeks and has less stock than baseline_order needs. Give a whole number and a reason of at most 20 plain words that names the numbers you used. Use only the numbers given. Do not invent prices, suppliers or dates.',
 				wp_json_encode(
 					array(
